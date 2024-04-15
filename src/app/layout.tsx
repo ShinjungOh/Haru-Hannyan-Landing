@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: '하루한냥',
   description: '나만의 고양이를 모아보세요',
+  icons: {
+    icon: '/feel-cat.svg',
+  },
 };
 
 export default function RootLayout({
