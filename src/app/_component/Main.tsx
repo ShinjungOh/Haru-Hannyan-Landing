@@ -4,6 +4,7 @@ import NavigationHeader from './NavigationHeader';
 import Footer from './Footer';
 import Info from './Info';
 import styleToken from '../../styles/styleToken.css';
+import Description from './Description';
 
 export default function Main() {
   return (
@@ -14,7 +15,9 @@ export default function Main() {
           <Info />
         </Banner>
         <Banner />
-        <Banner />
+        <Banner color={`${styleToken.color.primary}`}>
+          <Description />
+        </Banner>
       </div>
       <Footer />
     </>

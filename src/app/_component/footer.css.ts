@@ -18,7 +18,7 @@ export const logoContainer = style({
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: '0 10px',
-  gap: '8px',
+  gap: '2px',
   position: 'relative',
   top: '120px',
 });

@@ -9,13 +9,6 @@ export const container = style({
   justifyContent: 'flex-start',
   alignItems: 'center',
   padding: '20px',
-  border: `1px solid ${styleToken.color.gray2}`,
-});
-
-export const title = style({
-  fontSize: '24px',
-  fontWeight: '600',
-  marginBottom: '20px',
 });
 
 export const info = style({
@@ -38,6 +31,7 @@ export const infoSection = style({
 export const infoTitle = style({
   fontSize: '46px',
   fontWeight: '600',
+  color: `${styleToken.color.gray1}`,
 });
 
 export const infoDescription = style({
@@ -45,4 +39,34 @@ export const infoDescription = style({
   fontWeight: '500',
   color: `${styleToken.color.gray2}`,
   margin: '16px 0 48px 0',
+});
+
+export const description = style({
+  width: '100dvw',
+  height: '100%',
+  padding: '80px 180px',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
+export const descriptionSection = style({
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
+export const descriptionTitle = style({
+  fontSize: '46px',
+  fontWeight: '600',
+  color: `${styleToken.color.white}`,
+});
+
+export const descriptionDetail = style({
+  fontSize: '20px',
+  fontWeight: '400',
+  color: `${styleToken.color.white}`,
+  margin: '16px 0 0 0',
 });
