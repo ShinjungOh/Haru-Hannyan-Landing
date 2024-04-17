@@ -2,6 +2,7 @@ const COLOR_PROPERTIES = {
   background: '#FFFCF5',
   border: '#CDD5DF',
   primary: '#FAC94D',
+  primaryLight: '#FFECBE',
   secondary: '#C8E1FF',
   secondaryActive: '#95C2F8',
   alert_success: '#9EACF6',
