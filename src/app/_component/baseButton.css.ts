@@ -13,6 +13,7 @@ export const container = style({
   color: `${styleToken.color.white}`,
   fontSize: '18px',
   fontWeight: '600',
+  fontFamily: 'SUIT-Regular',
   border: 'none',
   cursor: 'pointer',
 });

@@ -23,6 +23,7 @@ export const logoContainer = style({
   padding: '0 10px',
   fontSize: '20px',
   fontWeight: 'bold',
+  fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.gray1}`,
   cursor: 'pointer',
 });

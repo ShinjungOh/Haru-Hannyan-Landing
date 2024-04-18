@@ -13,7 +13,7 @@ export default function Info() {
   };
 
   return (
-    <div className={styles.info}>
+    <div className={styles.infoContainer}>
       <section className={styles.infoSection}>
         <h1 className={styles.infoTitle}>
           고양이 스티커로 남기는

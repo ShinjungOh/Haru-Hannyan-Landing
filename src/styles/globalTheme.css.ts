@@ -1,4 +1,16 @@
-import { assignVars, createGlobalTheme, createGlobalThemeContract, globalStyle } from '@vanilla-extract/css';
+import {
+  assignVars,
+  createGlobalTheme,
+  createGlobalThemeContract,
+  globalFontFace,
+  globalStyle,
+} from '@vanilla-extract/css';
+
+globalFontFace('SUIT-Regular', {
+  src: `url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2')`,
+  fontWeight: 'normal',
+  fontStyle: 'normal',
+});
 
 export const global = createGlobalThemeContract({
   background: {
@@ -52,6 +64,7 @@ globalStyle('html', {
 globalStyle('html, body', {
   maxWidth: '100dvw',
   overflowX: 'hidden',
+  fontFamily: 'SUIT-Regular, sans-serif',
 });
 
 globalStyle('body', {
