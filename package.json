@@ -17,7 +17,8 @@
     "@vanilla-extract/css": "^1.14.2",
     "next": "14.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-responsive-carousel": "^3.2.23"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",

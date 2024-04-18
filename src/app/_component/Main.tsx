@@ -5,7 +5,7 @@ import Footer from './Footer';
 import Info from './Info';
 import styleToken from '../../styles/styleToken.css';
 import Description from './Description';
-import Carousel from './Carousel';
+import CarouselBanner from './CarouselBanner';
 
 export default function Main() {
   return (
@@ -16,7 +16,7 @@ export default function Main() {
           <Info />
         </Banner>
         <Banner>
-          <Carousel />
+          <CarouselBanner />
         </Banner>
         <Banner color={`${styleToken.color.primary}`}>
           <Description />

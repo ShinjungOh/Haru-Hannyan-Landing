@@ -52,32 +52,12 @@ export const carouselContainer = style({
 });
 
 export const carouselSection = style({
-  width: '100dvw',
-  height: '300px',
+  width: '740px',
+  height: '340px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  // border: `1px solid ${styleToken.color.gray1}`,
-});
-
-export const imageContainer = style({
-  width: '140px',
-  height: '140px',
-  backgroundColor: `${styleToken.color.secondary}`,
-  borderRadius: '50%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-});
-
-export const carouselDescription = style({
-  marginTop: '26px',
-  textAlign: 'center',
-  fontSize: '20px',
-  fontWeight: '400',
-  fontFamily: 'SUIT-Regular',
 });
 
 export const descriptionContainer = style({
