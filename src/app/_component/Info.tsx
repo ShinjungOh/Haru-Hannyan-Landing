@@ -15,7 +15,7 @@ export default async function Info() {
         <p className={styles.infoDescription}>매일을 기록하고 나만의 고양이를 모아보세요.</p>
         <BaseButton />
       </section>
-      <img src="/images/iphone_mockup.png" alt="iphone_mockup" style={{ width: '200px', marginRight: '20px' }} />
+      <img className={styles.infoImage} src="/images/iphone_mockup.png" alt="iphone_mockup" />
     </div>
   );
 }

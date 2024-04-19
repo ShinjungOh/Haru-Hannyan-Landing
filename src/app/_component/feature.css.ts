@@ -9,8 +9,8 @@ export const container = style({
   padding: '0 200px',
   backgroundColor: `${styleToken.color.white}`,
   '@media': {
-    '(max-width: 768px)': {
-      padding: '10px',
+    '(min-width: 768px) and (max-width: 1299px)': {
+      padding: '30px',
     },
   },
 });

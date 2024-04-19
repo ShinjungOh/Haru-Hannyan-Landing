@@ -10,7 +10,7 @@ export const container = style({
   alignItems: 'center',
   padding: '20px',
   '@media': {
-    '(max-width: 768px)': {},
+    '(max-width: 767px)': {},
   },
 });
 
@@ -23,8 +23,8 @@ export const infoContainer = style({
   justifyContent: 'space-between',
   alignItems: 'center',
   '@media': {
-    '(max-width: 768px)': {
-      padding: '110px 60px',
+    '(min-width: 768px) and (max-width: 1299px)': {
+      padding: '110px 100px',
     },
   },
 });
@@ -36,13 +36,24 @@ export const infoSection = style({
   alignItems: 'flex-start',
 });
 
+export const infoImage = style({
+  width: '200px',
+  marginRight: '20px',
+  '@media': {
+    '(min-width: 768px) and (max-width: 1299px)': {
+      width: '150px',
+      marginRight: '0',
+    },
+  },
+});
+
 export const infoTitle = style({
   fontSize: '46px',
   fontWeight: '600',
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.gray1}`,
   '@media': {
-    '(max-width: 768px)': {
+    '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',
     },
   },
@@ -55,7 +66,7 @@ export const infoDescription = style({
   color: `${styleToken.color.gray2}`,
   margin: '16px 0 48px 0',
   '@media': {
-    '(max-width: 768px)': {
+    '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '18px',
     },
   },
@@ -92,7 +103,7 @@ export const descriptionTitle = style({
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.white}`,
   '@media': {
-    '(max-width: 768px)': {
+    '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',
     },
   },
@@ -105,7 +116,7 @@ export const descriptionDetail = style({
   color: `${styleToken.color.white}`,
   margin: '16px 0 0 0',
   '@media': {
-    '(max-width: 768px)': {
+    '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '18px',
     },
   },

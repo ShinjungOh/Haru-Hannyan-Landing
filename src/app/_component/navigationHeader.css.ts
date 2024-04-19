@@ -12,7 +12,7 @@ export const navigationHeader = style({
   borderBottom: `1px solid ${styleToken.color.gray5}`,
   backgroundColor: `${styleToken.color.background}`,
   '@media': {
-    '(max-width: 768px)': {
+    '(min-width: 768px) and (max-width: 1299px)': {
       padding: '0 40px',
     },
   },
