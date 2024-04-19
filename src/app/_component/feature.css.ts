@@ -8,6 +8,11 @@ export const container = style({
   alignItems: 'center',
   padding: '0 200px',
   backgroundColor: `${styleToken.color.white}`,
+  '@media': {
+    '(max-width: 768px)': {
+      padding: '10px',
+    },
+  },
 });
 
 export const image = style({

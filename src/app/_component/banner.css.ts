@@ -9,6 +9,9 @@ export const container = style({
   justifyContent: 'flex-start',
   alignItems: 'center',
   padding: '20px',
+  '@media': {
+    '(max-width: 768px)': {},
+  },
 });
 
 export const infoContainer = style({
@@ -19,6 +22,11 @@ export const infoContainer = style({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
+  '@media': {
+    '(max-width: 768px)': {
+      padding: '110px 60px',
+    },
+  },
 });
 
 export const infoSection = style({
@@ -33,6 +41,11 @@ export const infoTitle = style({
   fontWeight: '600',
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.gray1}`,
+  '@media': {
+    '(max-width: 768px)': {
+      fontSize: '40px',
+    },
+  },
 });
 
 export const infoDescription = style({
@@ -41,6 +54,11 @@ export const infoDescription = style({
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.gray2}`,
   margin: '16px 0 48px 0',
+  '@media': {
+    '(max-width: 768px)': {
+      fontSize: '18px',
+    },
+  },
 });
 
 export const carouselContainer = style({
@@ -62,7 +80,6 @@ export const carouselSection = style({
 
 export const descriptionContainer = style({
   height: '100%',
-  padding: '80px 180px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -74,6 +91,11 @@ export const descriptionTitle = style({
   fontWeight: '600',
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.white}`,
+  '@media': {
+    '(max-width: 768px)': {
+      fontSize: '40px',
+    },
+  },
 });
 
 export const descriptionDetail = style({
@@ -82,4 +104,9 @@ export const descriptionDetail = style({
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.white}`,
   margin: '16px 0 0 0',
+  '@media': {
+    '(max-width: 768px)': {
+      fontSize: '18px',
+    },
+  },
 });

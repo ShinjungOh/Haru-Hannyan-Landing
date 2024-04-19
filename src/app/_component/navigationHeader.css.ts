@@ -11,6 +11,11 @@ export const navigationHeader = style({
   padding: '0 80px',
   borderBottom: `1px solid ${styleToken.color.gray5}`,
   backgroundColor: `${styleToken.color.background}`,
+  '@media': {
+    '(max-width: 768px)': {
+      padding: '0 40px',
+    },
+  },
 });
 
 export const logoContainer = style({
