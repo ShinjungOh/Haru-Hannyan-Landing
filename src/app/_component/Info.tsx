@@ -25,7 +25,7 @@ export default function Info() {
           하루한냥 바로가기
         </button>
       </section>
-      <img src="/images/iphone_mockup.png" alt="iphone_mockup" style={{ width: '200px' }} />
+      <img src="/images/iphone_mockup.png" alt="iphone_mockup" style={{ width: '200px', marginRight: '20px' }} />
     </div>
   );
 }

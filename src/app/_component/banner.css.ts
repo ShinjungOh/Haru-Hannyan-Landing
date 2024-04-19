@@ -14,7 +14,7 @@ export const container = style({
 export const infoContainer = style({
   width: '100dvw',
   height: '100%',
-  padding: '80px 180px',
+  padding: '80px 280px',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
