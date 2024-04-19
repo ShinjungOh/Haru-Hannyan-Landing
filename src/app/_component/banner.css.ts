@@ -61,16 +61,8 @@ export const carouselSection = style({
 });
 
 export const descriptionContainer = style({
-  width: '100dvw',
   height: '100%',
   padding: '80px 180px',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'center',
-});
-
-export const descriptionSection = style({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',

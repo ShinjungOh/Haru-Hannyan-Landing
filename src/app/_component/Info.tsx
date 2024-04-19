@@ -1,17 +1,9 @@
-'use client';
+'use server';
 
 import * as styles from './banner.css';
-import * as buttonStyles from './baseButton.css';
-import { useRouter } from 'next/navigation';
-import { PAGE_ADDRESS } from '../../lib/const/pageAddress';
+import BaseButton from './BaseButton';
 
-export default function Info() {
-  const router = useRouter();
-
-  const onClickAppLink = () => {
-    router.push(PAGE_ADDRESS.app);
-  };
-
+export default async function Info() {
   return (
     <div className={styles.infoContainer}>
       <section className={styles.infoSection}>
@@ -21,9 +13,7 @@ export default function Info() {
           하루의 기록, 하루한냥
         </h1>
         <p className={styles.infoDescription}>매일을 기록하고 나만의 고양이를 모아보세요.</p>
-        <button className={buttonStyles.container} onClick={onClickAppLink}>
-          하루한냥 바로가기
-        </button>
+        <BaseButton />
       </section>
       <img src="/images/iphone_mockup.png" alt="iphone_mockup" style={{ width: '200px', marginRight: '20px' }} />
     </div>
