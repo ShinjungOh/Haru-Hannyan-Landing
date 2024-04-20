@@ -12,6 +12,9 @@ export const container = style({
     '(min-width: 768px) and (max-width: 1299px)': {
       padding: '30px',
     },
+    '(max-width: 767px)': {
+      padding: '0',
+    },
   },
 });
 

@@ -17,14 +17,23 @@ export default function CarouselBanner() {
           useKeyboardArrows={false}
         >
           <div>
-            <img src="/carousel/carousel_1.png" alt="feature_image" />
+            <img src="/carousel/carousel_mobile_1.png" alt="feature_image" />
           </div>
           <div>
-            <img src="/carousel/carousel_3.png" alt="feature_image" />
+            <img src="/carousel/carousel_mobile_2.png" alt="feature_image" />
           </div>
           <div>
-            <img src="/carousel/carousel_2.png" alt="feature_image" />
+            <img src="/carousel/carousel_mobile_3.png" alt="feature_image" />
           </div>
+          {/*<div>*/}
+          {/*  <img src="/carousel/carousel_1.png" alt="feature_image" />*/}
+          {/*</div>*/}
+          {/*<div>*/}
+          {/*  <img src="/carousel/carousel_2.png" alt="feature_image" />*/}
+          {/*</div>*/}
+          {/*<div>*/}
+          {/*  <img src="/carousel/carousel_3.png" alt="feature_image" />*/}
+          {/*</div>*/}
         </Carousel>
       </section>
     </div>

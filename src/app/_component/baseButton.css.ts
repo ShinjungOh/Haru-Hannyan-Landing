@@ -16,4 +16,9 @@ export const container = style({
   fontFamily: 'SUIT-Regular',
   border: 'none',
   cursor: 'pointer',
+  '@media': {
+    '(max-width: 767px)': {
+      width: '200px',
+    },
+  },
 });

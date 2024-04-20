@@ -26,6 +26,9 @@ export const infoContainer = style({
     '(min-width: 768px) and (max-width: 1299px)': {
       padding: '110px 100px',
     },
+    '(max-width: 767px)': {
+      padding: '110px 80px',
+    },
   },
 });
 
@@ -44,6 +47,13 @@ export const infoImage = style({
       width: '150px',
       marginRight: '0',
     },
+    '(min-width: 671px) and (max-width: 768px)': {
+      width: '120px',
+      marginRight: '0',
+    },
+    '(max-width: 670px)': {
+      display: 'none',
+    },
   },
 });
 
@@ -56,6 +66,9 @@ export const infoTitle = style({
     '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',
     },
+    '(max-width: 767px)': {
+      fontSize: '32px',
+    },
   },
 });
 
@@ -67,6 +80,9 @@ export const infoDescription = style({
   margin: '16px 0 48px 0',
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
+      fontSize: '18px',
+    },
+    '(max-width: 767px)': {
       fontSize: '18px',
     },
   },
@@ -87,6 +103,12 @@ export const carouselSection = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+  '@media': {
+    '(max-width: 767px)': {
+      width: '380px',
+      height: '380px',
+    },
+  },
 });
 
 export const descriptionContainer = style({
@@ -106,6 +128,9 @@ export const descriptionTitle = style({
     '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',
     },
+    '(max-width: 767px)': {
+      fontSize: '32px',
+    },
   },
 });
 
@@ -117,6 +142,9 @@ export const descriptionDetail = style({
   margin: '16px 0 0 0',
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
+      fontSize: '18px',
+    },
+    '(max-width: 767px)': {
       fontSize: '18px',
     },
   },
