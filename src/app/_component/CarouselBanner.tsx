@@ -30,8 +30,6 @@ export default function CarouselBanner() {
 
   const handleThrottleResize = throttle(handleResize, 100);
 
-  console.log(width);
-
   useEffect(() => {
     handleResize();
     window.addEventListener(`resize`, handleThrottleResize);

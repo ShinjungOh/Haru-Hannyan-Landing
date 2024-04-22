@@ -112,6 +112,7 @@ export const carouselSection = style({
 });
 
 export const descriptionContainer = style({
+  width: '940px',
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
