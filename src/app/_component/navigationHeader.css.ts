@@ -15,6 +15,9 @@ export const navigationHeader = style({
     '(min-width: 768px) and (max-width: 1299px)': {
       padding: '0 40px',
     },
+    '(max-width: 767px)': {
+      padding: '0 20px',
+    },
   },
 });
 

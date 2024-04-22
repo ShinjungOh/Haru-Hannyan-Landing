@@ -17,17 +17,17 @@ export const container = style({
 export const infoContainer = style({
   width: '100dvw',
   height: '100%',
-  padding: '80px 280px',
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
+  gap: '400px',
   alignItems: 'center',
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
-      padding: '110px 100px',
+      gap: '200px',
     },
     '(max-width: 767px)': {
-      padding: '110px 80px',
+      gap: '100px',
     },
   },
 });

@@ -17,7 +17,6 @@ export const logoContainer = style({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: '0 10px',
   gap: '2px',
   position: 'relative',
   top: '120px',
@@ -35,4 +34,10 @@ export const logoItem = style({
 export const LogoImage = style({
   width: '36px',
   height: '36px',
+  '@media': {
+    '(max-width: 767px)': {
+      width: '32px',
+      height: '32px',
+    },
+  },
 });
