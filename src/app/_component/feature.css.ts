@@ -9,9 +9,6 @@ export const container = style({
   gap: '200px',
   backgroundColor: `${styleToken.color.white}`,
   '@media': {
-    // '(min-width: 768px) and (max-width: 1299px)': {
-    //   padding: '0 200px',
-    // },
     '(max-width: 767px)': {
       gap: '150px',
     },
@@ -37,7 +34,6 @@ export const featureContainer = style({
       gap: '50px',
     },
   },
-  // border: `1px solid ${styleToken.color.gray3}`,
 });
 
 export const infoContainer = style({
@@ -48,6 +44,7 @@ export const infoContainer = style({
   '@media': {
     '(max-width: 767px)': {
       alignItems: 'center',
+      order: 1,
     },
   },
 });
@@ -57,6 +54,7 @@ export const infoImage = style({
   '@media': {
     '(max-width: 767px)': {
       width: '180px',
+      order: 2,
     },
   },
 });
@@ -66,6 +64,7 @@ export const infoImageTest = style({
   '@media': {
     '(max-width: 767px)': {
       width: '280px',
+      order: 2,
     },
   },
 });
