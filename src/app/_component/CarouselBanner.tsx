@@ -3,24 +3,12 @@
 import * as styles from './banner.css';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { useCallback, useEffect, useRef, useState } from 'react'; // requires a loader
+import { useCallback, useEffect, useRef, useState } from 'react';
+import throttle from '../../lib/utils/throttle';
 
 export default function CarouselBanner() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
-
-  const throttle = (callback: () => void, limit: number) => {
-    let timer: NodeJS.Timeout | null = null;
-
-    return () => {
-      if (!timer) {
-        timer = setTimeout(() => {
-          timer = null;
-          callback();
-        }, limit);
-      }
-    };
-  };
 
   const handleResize = useCallback(() => {
     if (containerRef.current && containerRef.current.clientWidth) {
@@ -52,13 +40,31 @@ export default function CarouselBanner() {
               useKeyboardArrows={false}
             >
               <div>
-                <img src="/carousel/carousel_mobile_1.png" alt="feature_image" />
+                <img
+                  src="/carousel/carousel_mobile_1.png"
+                  alt="feature_image"
+                  style={{
+                    width: '380px',
+                  }}
+                />
               </div>
               <div>
-                <img src="/carousel/carousel_mobile_2.png" alt="feature_image" />
+                <img
+                  src="/carousel/carousel_mobile_2.png"
+                  alt="feature_image"
+                  style={{
+                    width: '380px',
+                  }}
+                />
               </div>
               <div>
-                <img src="/carousel/carousel_mobile_3.png" alt="feature_image" />
+                <img
+                  src="/carousel/carousel_mobile_3.png"
+                  alt="feature_image"
+                  style={{
+                    width: '380px',
+                  }}
+                />
               </div>
             </Carousel>
           ) : (
@@ -71,13 +77,31 @@ export default function CarouselBanner() {
               useKeyboardArrows={false}
             >
               <div>
-                <img src="/carousel/carousel_1.png" alt="feature_image" />
+                <img
+                  src="/carousel/carousel_1.png"
+                  alt="feature_image"
+                  style={{
+                    width: '740px',
+                  }}
+                />
               </div>
               <div>
-                <img src="/carousel/carousel_2.png" alt="feature_image" />
+                <img
+                  src="/carousel/carousel_2.png"
+                  alt="feature_image"
+                  style={{
+                    width: '740px',
+                  }}
+                />
               </div>
               <div>
-                <img src="/carousel/carousel_3.png" alt="feature_image" />
+                <img
+                  src="/carousel/carousel_3.png"
+                  alt="feature_image"
+                  style={{
+                    width: '740px',
+                  }}
+                />
               </div>
             </Carousel>
           )}

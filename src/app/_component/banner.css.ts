@@ -9,7 +9,9 @@ export const container = style({
   justifyContent: 'flex-start',
   alignItems: 'center',
   '@media': {
-    '(max-width: 767px)': {},
+    '(max-width: 767px)': {
+      height: '400px',
+    },
   },
 });
 
@@ -129,7 +131,7 @@ export const descriptionTitle = style({
       fontSize: '40px',
     },
     '(max-width: 767px)': {
-      fontSize: '32px',
+      fontSize: '28px',
     },
   },
 });
@@ -145,6 +147,7 @@ export const descriptionDetail = style({
       fontSize: '18px',
     },
     '(max-width: 767px)': {
+      margin: '8px 0 0 0',
       fontSize: '18px',
     },
   },

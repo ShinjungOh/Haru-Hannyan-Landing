@@ -8,14 +8,14 @@ export const container = style({
   alignItems: 'center',
   gap: '200px',
   backgroundColor: `${styleToken.color.white}`,
-  // '@media': {
-  //   '(min-width: 768px) and (max-width: 1299px)': {
-  //     padding: '0 200px',
-  //   },
-  //   '(max-width: 767px)': {
-  //     padding: '0',
-  //   },
-  // },
+  '@media': {
+    // '(min-width: 768px) and (max-width: 1299px)': {
+    //   padding: '0 200px',
+    // },
+    '(max-width: 767px)': {
+      gap: '150px',
+    },
+  },
 });
 
 export const featureContainer = style({
@@ -26,6 +26,17 @@ export const featureContainer = style({
   justifyContent: 'center',
   alignItems: 'center',
   gap: '180px',
+  '@media': {
+    '(min-width: 768px) and (max-width: 1299px)': {
+      gap: '100px',
+    },
+    '(max-width: 767px)': {
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      gap: '50px',
+    },
+  },
   // border: `1px solid ${styleToken.color.gray3}`,
 });
 
@@ -34,10 +45,29 @@ export const infoContainer = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'flex-start',
+  '@media': {
+    '(max-width: 767px)': {
+      alignItems: 'center',
+    },
+  },
 });
 
 export const infoImage = style({
   width: '280px',
+  '@media': {
+    '(max-width: 767px)': {
+      width: '180px',
+    },
+  },
+});
+
+export const infoImageTest = style({
+  width: '380px',
+  '@media': {
+    '(max-width: 767px)': {
+      width: '280px',
+    },
+  },
 });
 
 export const titleContainer = style({
@@ -47,6 +77,12 @@ export const titleContainer = style({
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'flex-end',
+  '@media': {
+    '(max-width: 767px)': {
+      width: '90%',
+      height: '180px',
+    },
+  },
 });
 
 export const title = style({
@@ -58,9 +94,11 @@ export const title = style({
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',
+      width: '680px',
     },
     '(max-width: 767px)': {
       fontSize: '32px',
+      width: '440px',
     },
   },
 });
@@ -70,15 +108,26 @@ export const featureTitleContainer = style({
   flexDirection: 'row',
   justifyContent: 'flex-start',
   alignItems: 'center',
+  '@media': {
+    '(max-width: 767px)': {
+      textAlign: 'center',
+    },
+  },
 });
 
 export const featureTitle = style({
   fontSize: '30px',
-  fontWeight: 'bold',
+  fontWeight: '700',
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.alert_success}`,
   textAlign: 'center',
   margin: '0 0 0 20px',
+  '@media': {
+    '(max-width: 767px)': {
+      fontSize: '24px',
+      margin: '0 0 0 10px',
+    },
+  },
 });
 
 export const circle = style({
@@ -94,18 +143,28 @@ export const circle = style({
   fontWeight: 'bold',
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.gray2}`,
+  '@media': {
+    '(max-width: 767px)': {
+      width: '36px',
+      height: '36px',
+      fontSize: '16px',
+    },
+  },
 });
 
 export const featureDescription = style({
   fontSize: '18px',
-  fontWeight: 'lighter',
+  fontWeight: '100',
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.gray2}`,
   margin: '30px 0 0 8px',
   lineHeight: '32px',
-});
-
-export const image = style({
-  width: '100%',
-  height: 'auto',
+  '@media': {
+    '(max-width: 767px)': {
+      textAlign: 'center',
+      fontSize: '14px',
+      lineHeight: '24px',
+      margin: '20px 0 0 0',
+    },
+  },
 });

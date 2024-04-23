@@ -8,7 +8,6 @@ export default function NavigationHeader() {
 
   const onClickLogo = () => {
     router.push('/');
-    console.log('logo clicked');
   };
 
   return (

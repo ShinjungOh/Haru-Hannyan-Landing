@@ -12,6 +12,7 @@ export const container = style({
   padding: '0 100px',
   '@media': {
     '(max-width: 767px)': {
+      height: '260px',
       padding: '0 30px',
     },
   },

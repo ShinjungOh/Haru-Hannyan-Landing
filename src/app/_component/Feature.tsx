@@ -1,8 +1,29 @@
 'use server';
 
 import * as styles from './feature.css';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import throttle from '../../lib/utils/throttle';
 
 export default async function Feature() {
+  // const containerRef = useRef<HTMLDivElement>(null);
+  // const [width, setWidth] = useState(0);
+  //
+  // const handleResize = useCallback(() => {
+  //   if (containerRef.current && containerRef.current.clientWidth) {
+  //     setWidth(containerRef.current.offsetWidth || 0);
+  //   }
+  // }, []);
+  //
+  // const handleThrottleResize = throttle(handleResize, 100);
+  //
+  // useEffect(() => {
+  //   handleResize();
+  //   window.addEventListener(`resize`, handleThrottleResize);
+  //   return () => {
+  //     window.removeEventListener(`resize`, handleThrottleResize);
+  //   };
+  // }, [containerRef, handleResize, handleThrottleResize]);
+
   return (
     <section className={styles.container}>
       <div className={styles.titleContainer}>
@@ -45,14 +66,7 @@ export default async function Feature() {
         <img className={styles.infoImage} src="/images/iphone_mockup_timeline.png" alt="iphone_mockup" />
       </section>
       <section className={styles.featureContainer}>
-        <img
-          className={styles.infoImage}
-          src="/images/iphone_mockup_test.png"
-          alt="iphone_mockup"
-          style={{
-            width: '380px',
-          }}
-        />
+        <img className={styles.infoImageTest} src="/images/iphone_mockup_test.png" alt="iphone_mockup" />
         <div className={styles.infoContainer}>
           <div className={styles.featureTitleContainer}>
             <div className={styles.circle}>3</div>
