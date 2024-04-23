@@ -12,9 +12,7 @@ export default function Main() {
         <Banner color={`${styleToken.color.primaryLight}`}>
           <Info />
         </Banner>
-        <Banner>
-          <CarouselBanner />
-        </Banner>
+        <CarouselBanner />
         <Banner color={`${styleToken.color.primary}`}>
           <Description />
         </Banner>

@@ -11,16 +11,22 @@ export const navigationHeader = style({
   padding: '0 80px',
   borderBottom: `1px solid ${styleToken.color.gray5}`,
   backgroundColor: `${styleToken.color.background}`,
+  '@media': {
+    '(min-width: 768px) and (max-width: 1299px)': {
+      padding: '0 40px',
+    },
+    '(max-width: 767px)': {
+      padding: '0 20px',
+    },
+  },
 });
 
 export const logoContainer = style({
-  width: '148px',
-  height: '100%',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: '0 10px',
+  gap: '10px',
   fontSize: '20px',
   fontWeight: 'bold',
   fontFamily: 'SUIT-Regular',
