@@ -8,7 +8,6 @@ export const container = style({
   flexDirection: 'column',
   justifyContent: 'flex-start',
   alignItems: 'center',
-  padding: '20px',
   '@media': {
     '(max-width: 767px)': {},
   },

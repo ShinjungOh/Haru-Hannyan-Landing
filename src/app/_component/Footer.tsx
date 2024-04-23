@@ -17,15 +17,20 @@ export default function Footer() {
 
   return (
     <div className={styles.container}>
-      <h1>Footer</h1>
-      <div className={styles.logoContainer}>
-        <div className={styles.logoItem} onClick={onClickGithub}>
-          <img className={styles.LogoImage} src="/icons/github_icon.png" alt="github" />
+      <section className={styles.contentsContainer}>
+        <div className={styles.titleContainer}>
+          <img className={styles.iconImage} src="/feel-cat.svg" alt="하루한냥 로고" />
+          <h3 className={styles.title}>하루한냥</h3>
         </div>
-        <div className={styles.logoItem} onClick={onClickTistory}>
-          <img className={styles.LogoImage} src="/icons/tistory_icon.png" alt="tistory" />
+        <div className={styles.iconContainer}>
+          <div className={styles.iconItem} onClick={onClickGithub}>
+            <img className={styles.iconImage} src="/icons/github_icon.png" alt="github" />
+          </div>
+          <div className={styles.iconItem} onClick={onClickTistory}>
+            <img className={styles.iconImage} src="/icons/tistory_icon.png" alt="tistory" />
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

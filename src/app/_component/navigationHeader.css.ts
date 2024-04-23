@@ -22,13 +22,11 @@ export const navigationHeader = style({
 });
 
 export const logoContainer = style({
-  width: '148px',
-  height: '100%',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  padding: '0 10px',
+  gap: '10px',
   fontSize: '20px',
   fontWeight: 'bold',
   fontFamily: 'SUIT-Regular',

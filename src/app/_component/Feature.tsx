@@ -67,6 +67,7 @@ export default async function Feature() {
           </p>
         </div>
       </section>
+      <div />
     </section>
   );
 }

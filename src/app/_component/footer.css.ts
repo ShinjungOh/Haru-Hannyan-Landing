@@ -2,36 +2,62 @@ import { style } from '@vanilla-extract/css';
 import styleToken from '../../styles/styleToken.css';
 
 export const container = style({
-  width: '100dvw',
+  width: '100%',
   height: '360px',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'flex-start',
-  alignItems: 'flex-start',
-  padding: '60px',
+  justifyContent: 'center',
+  alignItems: 'center',
   backgroundColor: `${styleToken.color.gray5}90`,
+  padding: '0 100px',
+  '@media': {
+    '(max-width: 767px)': {
+      padding: '0 30px',
+    },
+  },
 });
 
-export const logoContainer = style({
+export const contentsContainer = style({
+  width: '100%',
   display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  gap: '2px',
-  position: 'relative',
-  top: '120px',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'flex-start',
 });
 
-export const logoItem = style({
+export const titleContainer = style({
   display: 'flex',
   flexDirection: 'row',
-  justifyContent: 'space-between',
+  justifyContent: 'center',
   alignItems: 'center',
-  padding: '10px',
+});
+
+export const title = style({
+  fontSize: '20px',
+  color: `${styleToken.color.gray1}`,
+  fontFamily: 'SUIT-Regular',
+  marginLeft: '6px',
+});
+
+export const iconContainer = style({
+  width: '90%',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'flex-start',
+  alignItems: 'center',
+  gap: '20px',
+  margin: '32px 0 0 0',
+});
+
+export const iconItem = style({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
   cursor: 'pointer',
 });
 
-export const LogoImage = style({
+export const iconImage = style({
   width: '36px',
   height: '36px',
   '@media': {

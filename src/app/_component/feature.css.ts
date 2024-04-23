@@ -6,7 +6,7 @@ export const container = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '180px',
+  gap: '200px',
   backgroundColor: `${styleToken.color.white}`,
   // '@media': {
   //   '(min-width: 768px) and (max-width: 1299px)': {
@@ -25,7 +25,7 @@ export const featureContainer = style({
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '200px',
+  gap: '180px',
   // border: `1px solid ${styleToken.color.gray3}`,
 });
 
@@ -42,7 +42,7 @@ export const infoImage = style({
 
 export const titleContainer = style({
   width: '100%',
-  height: '300px',
+  height: '260px',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
