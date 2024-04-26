@@ -15,6 +15,45 @@ export const container = style({
   },
 });
 
+export const titleContainer = style({
+  width: '100%',
+  height: '260px',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'flex-end',
+  '@media': {
+    '(max-width: 767px)': {
+      width: '90%',
+      height: '180px',
+    },
+  },
+});
+
+export const title = style({
+  width: '940px',
+  fontSize: '46px',
+  fontWeight: '600',
+  fontFamily: 'SUIT-Regular',
+  color: `${styleToken.color.gray1}`,
+  '@media': {
+    '(min-width: 768px) and (max-width: 1299px)': {
+      fontSize: '40px',
+      width: '680px',
+    },
+    '(max-width: 767px)': {
+      fontSize: '32px',
+      width: '440px',
+    },
+  },
+  transition: 'transform 1.0s ease-out',
+  transform: 'translateY(100%)',
+});
+
+export const titleVisible = style({
+  transform: 'translateY(0)',
+});
+
 export const featureContainer = style({
   width: '100%',
   height: '100%',
@@ -65,39 +104,6 @@ export const infoImageTest = style({
     '(max-width: 767px)': {
       width: '280px',
       order: 2,
-    },
-  },
-});
-
-export const titleContainer = style({
-  width: '100%',
-  height: '260px',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'flex-end',
-  '@media': {
-    '(max-width: 767px)': {
-      width: '90%',
-      height: '180px',
-    },
-  },
-});
-
-export const title = style({
-  width: '940px',
-  fontSize: '46px',
-  fontWeight: '600',
-  fontFamily: 'SUIT-Regular',
-  color: `${styleToken.color.gray1}`,
-  '@media': {
-    '(min-width: 768px) and (max-width: 1299px)': {
-      fontSize: '40px',
-      width: '680px',
-    },
-    '(max-width: 767px)': {
-      fontSize: '32px',
-      width: '440px',
     },
   },
 });
