@@ -6,26 +6,26 @@ export const container = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '200px',
+  gap: '100px',
   backgroundColor: `${styleToken.color.white}`,
   '@media': {
     '(max-width: 767px)': {
-      gap: '150px',
+      gap: '60px',
     },
   },
 });
 
 export const titleContainer = style({
   width: '100%',
-  height: '260px',
+  height: '360px',
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
-  alignItems: 'flex-end',
+  alignItems: 'center',
   '@media': {
     '(max-width: 767px)': {
       width: '90%',
-      height: '180px',
+      height: '280px',
     },
   },
 });
@@ -36,6 +36,8 @@ export const title = style({
   fontWeight: '600',
   fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.gray1}`,
+  transition: 'transform 1.0s ease-out',
+  transform: 'translateY(100%)',
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',
@@ -46,8 +48,6 @@ export const title = style({
       width: '440px',
     },
   },
-  transition: 'transform 1.0s ease-out',
-  transform: 'translateY(100%)',
 });
 
 export const titleVisible = style({
@@ -55,7 +55,7 @@ export const titleVisible = style({
 });
 
 export const featureContainer = style({
-  width: '100%',
+  width: '100dvw',
   height: '100%',
   display: 'flex',
   flexDirection: 'row',
@@ -164,6 +164,7 @@ export const featureDescription = style({
   color: `${styleToken.color.gray2}`,
   margin: '30px 0 0 8px',
   lineHeight: '32px',
+  whiteSpace: 'pre-line',
   '@media': {
     '(max-width: 767px)': {
       textAlign: 'center',
