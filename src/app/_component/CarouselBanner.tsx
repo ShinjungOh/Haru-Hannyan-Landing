@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import throttle from '../../lib/utils/throttle';
+import { CAROUSEL } from '../../lib/const/carousel';
 
 export default function CarouselBanner() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,81 +31,26 @@ export default function CarouselBanner() {
     <div className={styles.container} ref={containerRef}>
       <div className={styles.carouselContainer}>
         <section className={styles.carouselSection}>
-          {width < 768 ? (
-            <Carousel
-              autoPlay
-              infiniteLoop
-              showStatus={false}
-              showThumbs={false}
-              showArrows={false}
-              useKeyboardArrows={false}
-            >
-              <div>
+          <Carousel
+            autoPlay
+            infiniteLoop
+            showStatus={false}
+            showThumbs={false}
+            showArrows={false}
+            useKeyboardArrows={false}
+          >
+            {[1, 2, 3].map((id) => (
+              <div key={id}>
                 <img
-                  src="/carousel/carousel_mobile_1.png"
+                  src={width < 768 ? CAROUSEL[id].mobile : CAROUSEL[id].desktop}
                   alt="feature_image"
                   style={{
-                    width: '380px',
+                    width: width < 768 ? '380px' : '740px',
                   }}
                 />
               </div>
-              <div>
-                <img
-                  src="/carousel/carousel_mobile_2.png"
-                  alt="feature_image"
-                  style={{
-                    width: '380px',
-                  }}
-                />
-              </div>
-              <div>
-                <img
-                  src="/carousel/carousel_mobile_3.png"
-                  alt="feature_image"
-                  style={{
-                    width: '380px',
-                  }}
-                />
-              </div>
-            </Carousel>
-          ) : (
-            <Carousel
-              autoPlay
-              infiniteLoop
-              showStatus={false}
-              showThumbs={false}
-              showArrows={false}
-              useKeyboardArrows={false}
-            >
-              <div>
-                <img
-                  src="/carousel/carousel_1.png"
-                  alt="feature_image"
-                  style={{
-                    width: '740px',
-                  }}
-                />
-              </div>
-              <div>
-                <img
-                  src="/carousel/carousel_2.png"
-                  alt="feature_image"
-                  style={{
-                    width: '740px',
-                  }}
-                />
-              </div>
-              <div>
-                <img
-                  src="/carousel/carousel_3.png"
-                  alt="feature_image"
-                  style={{
-                    width: '740px',
-                  }}
-                />
-              </div>
-            </Carousel>
-          )}
+            ))}
+          </Carousel>
         </section>
       </div>
     </div>

@@ -6,17 +6,56 @@ export const container = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '200px',
+  gap: '100px',
   backgroundColor: `${styleToken.color.white}`,
   '@media': {
     '(max-width: 767px)': {
-      gap: '150px',
+      gap: '60px',
     },
   },
 });
 
-export const featureContainer = style({
+export const titleContainer = style({
   width: '100%',
+  height: '360px',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  '@media': {
+    '(max-width: 767px)': {
+      width: '90%',
+      height: '280px',
+    },
+  },
+});
+
+export const title = style({
+  width: '940px',
+  fontSize: '46px',
+  fontWeight: '600',
+  fontFamily: 'SUIT-Regular',
+  color: `${styleToken.color.gray1}`,
+  transition: 'transform 1.0s ease-out',
+  transform: 'translateY(100%)',
+  '@media': {
+    '(min-width: 768px) and (max-width: 1299px)': {
+      fontSize: '40px',
+      width: '680px',
+    },
+    '(max-width: 767px)': {
+      fontSize: '32px',
+      width: '440px',
+    },
+  },
+});
+
+export const titleVisible = style({
+  transform: 'translateY(0)',
+});
+
+export const featureContainer = style({
+  width: '100dvw',
   height: '100%',
   display: 'flex',
   flexDirection: 'row',
@@ -65,39 +104,6 @@ export const infoImageTest = style({
     '(max-width: 767px)': {
       width: '280px',
       order: 2,
-    },
-  },
-});
-
-export const titleContainer = style({
-  width: '100%',
-  height: '260px',
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'flex-end',
-  '@media': {
-    '(max-width: 767px)': {
-      width: '90%',
-      height: '180px',
-    },
-  },
-});
-
-export const title = style({
-  width: '940px',
-  fontSize: '46px',
-  fontWeight: '600',
-  fontFamily: 'SUIT-Regular',
-  color: `${styleToken.color.gray1}`,
-  '@media': {
-    '(min-width: 768px) and (max-width: 1299px)': {
-      fontSize: '40px',
-      width: '680px',
-    },
-    '(max-width: 767px)': {
-      fontSize: '32px',
-      width: '440px',
     },
   },
 });
@@ -158,6 +164,7 @@ export const featureDescription = style({
   color: `${styleToken.color.gray2}`,
   margin: '30px 0 0 8px',
   lineHeight: '32px',
+  whiteSpace: 'pre-line',
   '@media': {
     '(max-width: 767px)': {
       textAlign: 'center',
