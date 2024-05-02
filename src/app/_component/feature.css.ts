@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import styleToken from '../../styles/styleToken.css';
+import styleToken from '@styles/styleToken.css';
 
 export const container = style({
   display: 'flex',

@@ -1,11 +1,11 @@
 'use client';
 
-import * as styles from './banner.css';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import throttle from '../../lib/utils/throttle';
-import { CAROUSEL } from '../../lib/const/carousel';
+import { Carousel } from 'react-responsive-carousel';
+import { CAROUSEL } from '@lib/const/carousel.ts';
+import throttle from '@lib/utils/throttle';
+import * as styles from './banner.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function CarouselBanner() {
   const containerRef = useRef<HTMLDivElement>(null);

@@ -1,9 +1,9 @@
 'use client';
 
-import * as styles from './feature.css';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
-import { FEATURE_INFO } from '../../lib/const/featureInfo';
+import { FEATURE_INFO } from '@lib/const/featureInfo.ts';
+import * as styles from './feature.css';
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 2], [-distance, distance]);

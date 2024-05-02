@@ -1,9 +1,9 @@
-import * as styles from './main.css';
+import styleToken from '@styles/styleToken.css';
 import Banner from './Banner';
 import Info from './Info';
-import styleToken from '../../styles/styleToken.css';
-import Description from './Description';
 import CarouselBanner from './CarouselBanner';
+import Description from './Description';
+import * as styles from './main.css';
 
 export default function Main() {
   return (

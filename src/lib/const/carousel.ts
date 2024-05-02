@@ -1,4 +1,6 @@
-export const CAROUSEL = {
+import { Carousel } from '@lib/types';
+
+export const CAROUSEL: Carousel = {
   1: {
     mobile: '/carousel/carousel_mobile_1.png',
     desktop: '/carousel/carousel_1.png',

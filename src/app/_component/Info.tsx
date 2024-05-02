@@ -1,7 +1,7 @@
 'use server';
 
 import * as styles from './banner.css';
-import BaseButton from './BaseButton';
+import BaseButton from './common/BaseButton';
 
 export default async function Info() {
   return (

@@ -1,8 +1,8 @@
 'use client';
 
-import * as styles from './footer.css';
 import { useRouter } from 'next/navigation';
-import { PAGE_ADDRESS } from '../../lib/const/pageAddress';
+import { PAGE_ADDRESS } from '@lib/const/pageAddress.ts';
+import * as styles from './footer.css';
 
 export default function Footer() {
   const router = useRouter();

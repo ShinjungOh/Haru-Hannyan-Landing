@@ -1,7 +1,7 @@
 'use server';
 
-import * as styles from './banner.css';
 import { ComponentProps } from 'react';
+import * as styles from './banner.css';
 
 type BannerProps = {
   color: string;

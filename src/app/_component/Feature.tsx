@@ -1,8 +1,8 @@
 'use client';
 
-import * as styles from './feature.css';
 import { useEffect, useState } from 'react';
 import FeatureBanner from './FeatureBanner';
+import * as styles from './feature.css';
 
 export default function Feature() {
   const [isVisible, setIsVisible] = useState(false);

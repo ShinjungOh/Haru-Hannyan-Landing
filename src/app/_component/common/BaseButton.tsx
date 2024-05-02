@@ -1,8 +1,8 @@
 'use client';
 
-import * as buttonStyles from './baseButton.css';
 import { useRouter } from 'next/navigation';
-import { PAGE_ADDRESS } from '../../lib/const/pageAddress';
+import { PAGE_ADDRESS } from '@lib/const/pageAddress.ts';
+import * as buttonStyles from './baseButton.css';
 
 export default function BaseButton() {
   const router = useRouter();

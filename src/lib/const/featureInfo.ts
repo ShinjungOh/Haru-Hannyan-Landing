@@ -1,4 +1,6 @@
-export const IMAGE_PATH = {
+import { FeatureInfo, ImagePath } from '@lib/types';
+
+export const IMAGE_PATH: ImagePath = {
   DIARY: {
     src: '/images/iphone_mockup_diary.png',
     alt: 'iphone_mockup_diary',
@@ -13,7 +15,7 @@ export const IMAGE_PATH = {
   },
 };
 
-export const FEATURE_INFO = {
+export const FEATURE_INFO: FeatureInfo = {
   diary: {
     number: 1,
     title: '일기 작성',

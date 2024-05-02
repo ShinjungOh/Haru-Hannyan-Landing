@@ -1,7 +1,7 @@
 'use client';
 
-import * as styles from './navigationHeader.css';
 import { useRouter } from 'next/navigation';
+import * as styles from './navigationHeader.css';
 
 export default function NavigationHeader() {
   const router = useRouter();
