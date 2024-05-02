@@ -39,6 +39,11 @@
         "./src/styles/*"
       ]
     },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "plugins": [
     {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import FeatureBanner from './FeatureBanner';
+import FeatureItem from './FeatureItem';
 import * as styles from './feature.css';
 
 type FeatureProps = {
@@ -29,7 +29,7 @@ export default function Feature({ title }: FeatureProps) {
       <section className={styles.container}>
         <>
           {['diary', 'timeline', 'test'].map((id, index) => (
-            <FeatureBanner key={index} id={id} />
+            <FeatureItem key={index} id={id} />
           ))}
         </>
       </section>

@@ -24,7 +24,7 @@ export const titleContainer = style({
   alignItems: 'center',
   '@media': {
     '(max-width: 767px)': {
-      width: '90%',
+      width: '80%',
       height: '280px',
     },
   },

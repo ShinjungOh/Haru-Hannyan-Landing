@@ -2,14 +2,14 @@
 
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
-import { FEATURE_INFO } from '@lib/const/featureInfo.ts';
+import { FEATURE_INFO } from '@lib/const/featureInfo';
 import * as styles from './feature.css';
 
 function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 2], [-distance, distance]);
 }
 
-export default function FeatureBanner({ id }: { id: string }) {
+export default function FeatureItem({ id }: { id: string }) {
   const featureRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: featureRef });
   const y = useParallax(scrollYProgress, 200);

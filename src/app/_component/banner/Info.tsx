@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { PAGE_ADDRESS } from '@lib/const/pageAddress.ts';
+import { PAGE_ADDRESS } from '@lib/const/pageAddress';
 import * as styles from './banner.css';
 
 export default function Info() {
