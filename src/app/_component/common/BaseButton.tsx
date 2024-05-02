@@ -2,9 +2,13 @@
 
 import { useRouter } from 'next/navigation';
 import { PAGE_ADDRESS } from '@lib/const/pageAddress.ts';
-import * as buttonStyles from './baseButton.css';
+import * as buttonStyles from './button.css';
 
-export default function BaseButton() {
+type ButtonProps = {
+  title: string;
+};
+
+export default function Button({ title }: ButtonProps) {
   const router = useRouter();
 
   const onClickAppLink = () => {
@@ -13,7 +17,7 @@ export default function BaseButton() {
 
   return (
     <button className={buttonStyles.container} onClick={onClickAppLink}>
-      하루한냥 바로가기
+      {title}
     </button>
   );
 }

@@ -38,6 +38,7 @@ export const title = style({
   color: `${styleToken.color.gray1}`,
   transition: 'transform 1.0s ease-out',
   transform: 'translateY(100%)',
+  whiteSpace: 'pre-line',
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',

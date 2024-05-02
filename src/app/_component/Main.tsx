@@ -14,7 +14,7 @@ export default function Main() {
         </Banner>
         <CarouselBanner />
         <Banner color={`${styleToken.color.primary}`}>
-          <Description />
+          <Description title="마음을 돌보고 싶은 사람을 위한" detail="오늘의 감정을 잊지 않게 남겨보세요." />
         </Banner>
       </div>
     </>

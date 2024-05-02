@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <NavigationHeader />
       <Main />
-      <Feature />
+      <Feature title={'다양한 기능으로\n나의 감정을 셀프 케어'} />
       <Footer />
     </>
   );

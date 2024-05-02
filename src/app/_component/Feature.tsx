@@ -4,7 +4,11 @@ import { useEffect, useState } from 'react';
 import FeatureBanner from './FeatureBanner';
 import * as styles from './feature.css';
 
-export default function Feature() {
+type FeatureProps = {
+  title: string;
+};
+
+export default function Feature({ title }: FeatureProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -20,11 +24,7 @@ export default function Feature() {
   return (
     <section className={styles.container}>
       <div className={styles.titleContainer}>
-        <h1 className={`${styles.title} ${isVisible ? styles.titleVisible : ''}`}>
-          다양한 기능으로
-          <br />
-          나의 감정을 셀프 케어
-        </h1>
+        <h1 className={`${styles.title} ${isVisible ? styles.titleVisible : ''}`}>{title}</h1>
       </div>
       <section className={styles.container}>
         <>
