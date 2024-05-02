@@ -36,7 +36,6 @@ export const titleContainer = style({
 export const title = style({
   fontSize: '20px',
   color: `${styleToken.color.gray1}`,
-  fontFamily: 'SUIT-Regular',
   marginLeft: '6px',
 });
 
