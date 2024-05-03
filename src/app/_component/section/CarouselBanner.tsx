@@ -2,9 +2,9 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { CAROUSEL } from '@lib/const/carousel';
 import throttle from '@lib/utils/throttle';
-import * as styles from './banner.css';
+import { CAROUSEL } from '@lib/const/carousel';
+import * as styles from './section.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 export default function CarouselBanner() {
@@ -39,10 +39,10 @@ export default function CarouselBanner() {
             showArrows={false}
             useKeyboardArrows={false}
           >
-            {[1, 2, 3].map((id) => (
-              <div key={id}>
+            {CAROUSEL.map((_, index) => (
+              <div key={index}>
                 <img
-                  src={width < 768 ? CAROUSEL[id].mobile : CAROUSEL[id].desktop}
+                  src={width < 768 ? CAROUSEL[index].mobile : CAROUSEL[index].desktop}
                   alt="feature_image"
                   style={{
                     width: width < 768 ? '380px' : '740px',

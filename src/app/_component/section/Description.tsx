@@ -1,6 +1,6 @@
 'use server';
 
-import * as styles from './banner.css';
+import * as styles from './section.css';
 
 type DescriptionProps = {
   title: string;

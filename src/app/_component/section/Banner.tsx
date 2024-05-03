@@ -2,9 +2,9 @@
 
 import { useRouter } from 'next/navigation';
 import { PAGE_ADDRESS } from '@lib/const/pageAddress';
-import * as styles from './banner.css';
+import * as styles from './section.css';
 
-export default function Info() {
+export default function Banner() {
   const router = useRouter();
 
   const onClickAppLink = () => {
