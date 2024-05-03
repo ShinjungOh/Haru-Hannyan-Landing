@@ -8,7 +8,7 @@ export const container = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: `${styleToken.color.gray5}90`,
+  backgroundColor: `${styleToken.color.whiteGray}`,
   padding: '0 100px',
   '@media': {
     '(max-width: 767px)': {

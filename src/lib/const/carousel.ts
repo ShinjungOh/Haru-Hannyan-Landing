@@ -11,4 +11,4 @@ export const CAROUSEL = [
     mobile: '/carousel/carousel_mobile_3.png',
     desktop: '/carousel/carousel_3.png',
   },
-] as const;
+];

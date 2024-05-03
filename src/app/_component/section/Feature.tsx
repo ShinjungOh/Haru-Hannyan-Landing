@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { FEATURE_INFO } from '@lib/const/featureInfo';
 import FeatureItem from './FeatureItem';
 import * as styles from './feature.css';
 
@@ -28,9 +29,21 @@ export default function Feature({ title }: FeatureProps) {
       </div>
       <section className={styles.container}>
         <>
-          {['diary', 'timeline', 'test'].map((id, index) => (
-            <FeatureItem key={index} id={id} />
-          ))}
+          {FEATURE_INFO.map((feat, index) => {
+            const { number, title, description, image, feature } = feat;
+            const style = feature === 'timeline' ? { flexDirection: 'row-reverse' } : {};
+            return (
+              <FeatureItem
+                key={index}
+                number={number}
+                title={title}
+                description={description}
+                imageSrc={image}
+                feature={feature}
+                style={style}
+              />
+            );
+          })}
         </>
       </section>
       <div />

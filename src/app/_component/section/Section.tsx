@@ -1,10 +1,10 @@
 'use server';
 
-import { PropsWithChildren } from 'react';
+import { CSSProperties, PropsWithChildren } from 'react';
 import * as styles from './section.css';
 
 type BannerProps = {
-  backgroundColor: string;
+  backgroundColor: CSSProperties['backgroundColor'];
 };
 
 export default async function Section({ children, backgroundColor }: PropsWithChildren<BannerProps>) {
