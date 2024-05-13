@@ -59,9 +59,6 @@ export const infoImage = style({
 });
 
 export const infoTitle = style({
-  fontSize: '46px',
-  fontWeight: '600',
-  color: `${styleToken.color.gray1}`,
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',
@@ -73,9 +70,6 @@ export const infoTitle = style({
 });
 
 export const infoDescription = style({
-  fontSize: '20px',
-  fontWeight: '500',
-  color: `${styleToken.color.gray2}`,
   margin: '16px 0 48px 0',
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
@@ -97,8 +91,6 @@ export const button = style({
   borderRadius: '10px',
   backgroundColor: `${styleToken.color.primary}`,
   color: `${styleToken.color.white}`,
-  fontSize: '18px',
-  fontWeight: '600',
   fontFamily: 'SUIT-Regular',
   border: 'none',
   cursor: 'pointer',
@@ -142,9 +134,6 @@ export const descriptionContainer = style({
 });
 
 export const descriptionTitle = style({
-  fontSize: '46px',
-  fontWeight: '600',
-  color: `${styleToken.color.white}`,
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',
@@ -156,9 +145,6 @@ export const descriptionTitle = style({
 });
 
 export const descriptionDetail = style({
-  fontSize: '20px',
-  fontWeight: '400',
-  color: `${styleToken.color.white}`,
   margin: '16px 0 0 0',
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {

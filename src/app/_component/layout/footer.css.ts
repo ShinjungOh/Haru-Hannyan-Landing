@@ -33,12 +33,6 @@ export const titleContainer = style({
   alignItems: 'center',
 });
 
-export const title = style({
-  fontSize: '20px',
-  color: `${styleToken.color.gray1}`,
-  marginLeft: '6px',
-});
-
 export const iconContainer = style({
   width: '90%',
   display: 'flex',

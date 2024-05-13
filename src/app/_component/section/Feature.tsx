@@ -1,9 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { CSSProperties, useEffect, useState } from 'react';
 import { FEATURE_INFO } from '@lib/const/featureInfo';
 import FeatureItem from './FeatureItem';
 import * as styles from './feature.css';
+import { Typography } from '../common/Typography';
 
 type FeatureProps = {
   title: string;
@@ -25,13 +26,19 @@ export default function Feature({ title }: FeatureProps) {
   return (
     <section className={styles.container}>
       <div className={styles.titleContainer}>
-        <h1 className={`${styles.title} ${isVisible ? styles.titleVisible : ''}`}>{title}</h1>
+        <h1 className={`${styles.title} ${isVisible ? styles.titleVisible : ''}`}>
+          <Typography variant="h3" color="gray1">
+            {title}
+          </Typography>
+        </h1>
       </div>
       <section className={styles.container}>
         <>
           {FEATURE_INFO.map((feat, index) => {
             const { number, title, description, image, feature } = feat;
-            const style = feature === 'timeline' ? { flexDirection: 'row-reverse' } : {};
+            const imageClassName = feature === 'test' ? styles.infoImageTest : styles.infoImage;
+            const containerStyle: CSSProperties | undefined =
+              feature === 'timeline' ? { flexDirection: 'row-reverse' } : undefined;
             return (
               <FeatureItem
                 key={index}
@@ -39,8 +46,8 @@ export default function Feature({ title }: FeatureProps) {
                 title={title}
                 description={description}
                 imageSrc={image}
-                feature={feature}
-                style={style}
+                imageClassName={imageClassName}
+                style={containerStyle}
               />
             );
           })}

@@ -32,12 +32,8 @@ export const titleContainer = style({
 
 export const title = style({
   width: '940px',
-  fontSize: '46px',
-  fontWeight: '600',
-  color: `${styleToken.color.gray1}`,
   transition: 'transform 1.0s ease-out',
   transform: 'translateY(100%)',
-  whiteSpace: 'pre-line',
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
       fontSize: '40px',
@@ -121,9 +117,6 @@ export const featureTitleContainer = style({
 });
 
 export const featureTitle = style({
-  fontSize: '30px',
-  fontWeight: '700',
-  color: `${styleToken.color.alert_success}`,
   textAlign: 'center',
   margin: '0 0 0 20px',
   '@media': {
@@ -157,9 +150,6 @@ export const circle = style({
 });
 
 export const featureDescription = style({
-  fontSize: '18px',
-  fontWeight: '100',
-  color: `${styleToken.color.gray2}`,
   margin: '30px 0 0 8px',
   lineHeight: '32px',
   whiteSpace: 'pre-line',

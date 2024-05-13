@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import * as styles from '@app/_component/layout/footer.css';
 import { PAGE_ADDRESS } from '@lib/const/pageAddress';
+import { Typography } from './common/Typography';
 
 export default function HomeFooter() {
   const router = useRouter();
@@ -19,7 +20,16 @@ export default function HomeFooter() {
     <section className={styles.contentsContainer}>
       <div className={styles.titleContainer}>
         <img className={styles.iconImage} src="/feel-cat.svg" alt="하루한냥 로고" />
-        <h3 className={styles.title}>하루한냥</h3>
+        <Typography
+          variant="body3"
+          color="gray1"
+          fontWeight="weightBold"
+          style={{
+            marginLeft: '6px',
+          }}
+        >
+          하루한냥
+        </Typography>
       </div>
       <div className={styles.iconContainer}>
         <div className={styles.iconItem} onClick={onClickGithub}>
