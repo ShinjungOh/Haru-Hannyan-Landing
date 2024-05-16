@@ -58,29 +58,6 @@ export const infoImage = style({
   },
 });
 
-export const infoTitle = style({
-  '@media': {
-    '(min-width: 768px) and (max-width: 1299px)': {
-      fontSize: '40px',
-    },
-    '(max-width: 767px)': {
-      fontSize: '32px',
-    },
-  },
-});
-
-export const infoDescription = style({
-  margin: '16px 0 48px 0',
-  '@media': {
-    '(min-width: 768px) and (max-width: 1299px)': {
-      fontSize: '18px',
-    },
-    '(max-width: 767px)': {
-      fontSize: '18px',
-    },
-  },
-});
-
 export const button = style({
   width: '250px',
   height: '56px',
@@ -90,7 +67,6 @@ export const button = style({
   alignItems: 'center',
   borderRadius: '10px',
   backgroundColor: `${styleToken.color.primary}`,
-  color: `${styleToken.color.white}`,
   fontFamily: 'SUIT-Regular',
   border: 'none',
   cursor: 'pointer',
@@ -131,28 +107,4 @@ export const descriptionContainer = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-});
-
-export const descriptionTitle = style({
-  '@media': {
-    '(min-width: 768px) and (max-width: 1299px)': {
-      fontSize: '40px',
-    },
-    '(max-width: 767px)': {
-      fontSize: '28px',
-    },
-  },
-});
-
-export const descriptionDetail = style({
-  margin: '16px 0 0 0',
-  '@media': {
-    '(min-width: 768px) and (max-width: 1299px)': {
-      fontSize: '18px',
-    },
-    '(max-width: 767px)': {
-      margin: '8px 0 0 0',
-      fontSize: '18px',
-    },
-  },
 });

@@ -5,6 +5,7 @@ import { FEATURE_INFO } from '@lib/const/featureInfo';
 import FeatureItem from './FeatureItem';
 import * as styles from './feature.css';
 import { Typography } from '../common/Typography';
+import { useMediaQuery } from 'react-responsive';
 
 type FeatureProps = {
   title: string;
@@ -12,6 +13,10 @@ type FeatureProps = {
 
 export default function Feature({ title }: FeatureProps) {
   const [isVisible, setIsVisible] = useState(false);
+
+  const isMobile = useMediaQuery({
+    query: '(max-width: 767px)',
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +32,7 @@ export default function Feature({ title }: FeatureProps) {
     <section className={styles.container}>
       <div className={styles.titleContainer}>
         <h1 className={`${styles.title} ${isVisible ? styles.titleVisible : ''}`}>
-          <Typography variant="h3" color="gray1">
+          <Typography variant={isMobile ? 'subtitle3' : 'h3'} fontWeight="weightBold" color="gray1">
             {title}
           </Typography>
         </h1>
@@ -38,7 +43,7 @@ export default function Feature({ title }: FeatureProps) {
             const { number, title, description, image, feature } = feat;
             const imageClassName = feature === 'test' ? styles.infoImageTest : styles.infoImage;
             const containerStyle: CSSProperties | undefined =
-              feature === 'timeline' ? { flexDirection: 'row-reverse' } : undefined;
+              feature === 'timeline' && !isMobile ? { flexDirection: 'row-reverse' } : undefined;
             return (
               <FeatureItem
                 key={index}

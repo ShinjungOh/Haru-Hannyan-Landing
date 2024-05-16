@@ -11,6 +11,7 @@ const VARIANT = {
   subtitle2: { fontWeight: styleToken.font.weightMedium, fontSize: '34px' },
   subtitle3: { fontWeight: styleToken.font.weightMedium, fontSize: '32px' },
   subtitle4: { fontWeight: styleToken.font.weightMedium, fontSize: '30px' },
+  subtitle5: { fontWeight: styleToken.font.weightMedium, fontSize: '28px' },
   body1: { fontWeight: styleToken.font.weightRegular, fontSize: '24px' },
   body2: { fontWeight: styleToken.font.weightRegular, fontSize: '22px' },
   body3: { fontWeight: styleToken.font.weightRegular, fontSize: '20px' },
@@ -28,10 +29,13 @@ type TypographyVariant =
   | 'subtitle2'
   | 'subtitle3'
   | 'subtitle4'
+  | 'subtitle5'
   | 'body1'
   | 'body2'
   | 'body3'
-  | 'body4';
+  | 'body4'
+  | 'body5'
+  | 'body6';
 
 type TypographyProps = {
   variant: TypographyVariant;

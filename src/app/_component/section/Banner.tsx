@@ -4,9 +4,18 @@ import { useRouter } from 'next/navigation';
 import { PAGE_ADDRESS } from '@lib/const/pageAddress';
 import * as styles from './section.css';
 import { Typography } from '../common/Typography';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Banner() {
   const router = useRouter();
+
+  const isTablet = useMediaQuery({
+    query: '(min-width: 768px) and (max-width: 1299px)',
+  });
+
+  const isMobile = useMediaQuery({
+    query: '(max-width: 767px)',
+  });
 
   const onClickAppLink = () => {
     router.push(PAGE_ADDRESS.app);
@@ -15,18 +24,18 @@ export default function Banner() {
   return (
     <div className={styles.infoContainer}>
       <section className={styles.infoSection}>
-        <h1 className={styles.infoTitle}>
-          <Typography variant="h2" color="gray1">
-            고양이 스티커로 남기는
-            <br />
-            하루의 기록, 하루한냥
-          </Typography>
-        </h1>
-        <p className={styles.infoDescription}>
-          <Typography variant="body3" fontWeight="weightMedium">
-            매일을 기록하고 나만의 고양이를 모아보세요.
-          </Typography>
-        </p>
+        <Typography variant={isMobile ? 'subtitle3' : isTablet ? 'h3' : 'h2'} fontWeight="weightBold" color="gray1">
+          고양이 스티커로 남기는
+          <br />
+          하루의 기록, 하루한냥
+        </Typography>
+        <Typography
+          variant={isMobile || isTablet ? 'body4' : 'body3'}
+          fontWeight="weightMedium"
+          style={{ margin: '16px 0 48px 0' }}
+        >
+          매일을 기록하고 나만의 고양이를 모아보세요.
+        </Typography>
         <button className={styles.button} onClick={onClickAppLink}>
           <Typography variant="body4" fontWeight="weightBold" color="white">
             하루한냥 바로가기

@@ -1,7 +1,8 @@
 'use client';
 
-import * as styles from './section.css';
+import { useMediaQuery } from 'react-responsive';
 import { Typography } from '../common/Typography';
+import * as styles from './section.css';
 
 type DescriptionProps = {
   title: string;
@@ -9,18 +10,26 @@ type DescriptionProps = {
 };
 
 export default function Description({ title, detail }: DescriptionProps) {
+  const isTablet = useMediaQuery({
+    query: '(min-width: 768px) and (max-width: 1299px)',
+  });
+
+  const isMobile = useMediaQuery({
+    query: '(max-width: 767px)',
+  });
+
   return (
     <div className={styles.descriptionContainer}>
-      <h1 className={styles.descriptionTitle}>
-        <Typography variant="h2" color="white">
-          {title}
-        </Typography>
-      </h1>
-      <p className={styles.descriptionDetail}>
-        <Typography variant="body3" color="white">
-          {detail}
-        </Typography>
-      </p>
+      <Typography variant={isMobile ? 'subtitle5' : isTablet ? 'h3' : 'h2'} color="white">
+        {title}
+      </Typography>
+      <Typography
+        variant={isMobile ? 'body4' : 'body3'}
+        color="white"
+        style={isMobile ? { marginTop: '8px' } : { marginTop: '16px' }}
+      >
+        {detail}
+      </Typography>
     </div>
   );
 }

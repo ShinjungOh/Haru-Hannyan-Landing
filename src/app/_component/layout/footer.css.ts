@@ -49,6 +49,7 @@ export const iconItem = style({
   justifyContent: 'center',
   alignItems: 'center',
   cursor: 'pointer',
+  border: 'none',
 });
 
 export const iconImage = style({

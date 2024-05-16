@@ -32,12 +32,12 @@ export default function HomeFooter() {
         </Typography>
       </div>
       <div className={styles.iconContainer}>
-        <div className={styles.iconItem} onClick={onClickGithub}>
+        <button className={styles.iconItem} onClick={onClickGithub}>
           <img className={styles.iconImage} src="/icons/github_icon.png" alt="github" />
-        </div>
-        <div className={styles.iconItem} onClick={onClickTistory}>
+        </button>
+        <button className={styles.iconItem} onClick={onClickTistory}>
           <img className={styles.iconImage} src="/icons/tistory_icon.png" alt="tistory" />
-        </div>
+        </button>
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import { CSSProperties, useRef } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import * as styles from './feature.css';
 import { Typography } from '../common/Typography';
+import { useMediaQuery } from 'react-responsive';
 
 type FeatureItemProps = {
   number: number;
@@ -23,6 +24,10 @@ export default function FeatureItem({ number, title, description, imageSrc, imag
   const { scrollYProgress } = useScroll({ target: featureRef });
   const y = useParallax(scrollYProgress, 200);
 
+  const isMobile = useMediaQuery({
+    query: '(max-width: 767px)',
+  });
+
   return (
     <motion.div style={{ y }}>
       <section className={styles.featureContainer} style={style}>
@@ -30,17 +35,33 @@ export default function FeatureItem({ number, title, description, imageSrc, imag
         <div className={styles.infoContainer}>
           <div className={styles.featureTitleContainer}>
             <div className={styles.circle}>{number}</div>
-            <h2 className={styles.featureTitle}>
-              <Typography variant="subtitle4" color="alert_success" fontWeight="weightBold">
-                {title}
-              </Typography>
-            </h2>
+            <Typography
+              variant={isMobile ? 'body1' : 'subtitle4'}
+              color="alert_success"
+              fontWeight="weightBold"
+              style={
+                isMobile ? { marginLeft: '10px', textAlign: 'center' } : { marginLeft: '20px', textAlign: 'center' }
+              }
+            >
+              {title}
+            </Typography>
           </div>
-          <p className={styles.featureDescription}>
-            <Typography variant="body4" fontWeight="weightRegular">
+          {isMobile ? (
+            <Typography
+              variant="body6"
+              style={{
+                textAlign: 'center',
+                marginTop: '20px',
+                lineHeight: '24px',
+              }}
+            >
               {description}
             </Typography>
-          </p>
+          ) : (
+            <Typography variant="body4" style={{ margin: '30px 0 0 8px', lineHeight: '32px', whiteSpace: 'pre-line' }}>
+              {description}
+            </Typography>
+          )}
         </div>
       </section>
     </motion.div>
