@@ -4,14 +4,14 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import throttle from '@lib/utils/throttle';
 import { CAROUSEL } from '@lib/const/carousel';
-import * as styles from './section.css';
+import * as styles from '../section.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 type CarouselBannerProps = {
   content: Array<{ mobile: string; desktop: string }>;
 };
 
-export default function CarouselBanner({ content }: CarouselBannerProps) {
+export default function ActualCarouselBanner({ content }: CarouselBannerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
 

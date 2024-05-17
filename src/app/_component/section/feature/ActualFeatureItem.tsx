@@ -2,9 +2,9 @@
 
 import { CSSProperties, useRef } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
-import * as styles from './feature.css';
-import { Typography } from '../common/Typography';
 import { useMediaQuery } from 'react-responsive';
+import * as styles from './feature.css';
+import { Typography } from '../../common/Typography';
 
 type FeatureItemProps = {
   number: number;
@@ -19,7 +19,14 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 2], [-distance, distance]);
 }
 
-export default function FeatureItem({ number, title, description, imageSrc, imageClassName, style }: FeatureItemProps) {
+export default function ActualFeatureItem({
+  number,
+  title,
+  description,
+  imageSrc,
+  imageClassName,
+  style,
+}: FeatureItemProps) {
   const featureRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: featureRef });
   const y = useParallax(scrollYProgress, 200);

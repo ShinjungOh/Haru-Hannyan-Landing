@@ -1,12 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { PAGE_ADDRESS } from '@lib/const/pageAddress';
-import * as styles from './section.css';
-import { Typography } from '../common/Typography';
 import { useMediaQuery } from 'react-responsive';
+import { PAGE_ADDRESS } from '@lib/const/pageAddress.ts';
+import * as styles from '../section.css.ts';
+import { Typography } from '../../common/Typography.tsx';
 
-export default function Banner() {
+export default function ActualBanner() {
   const router = useRouter();
 
   const isTablet = useMediaQuery({

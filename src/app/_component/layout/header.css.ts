@@ -30,6 +30,8 @@ export const logoContainer = style({
   fontSize: '20px',
   fontWeight: 'bold',
   color: `${styleToken.color.gray1}`,
+  border: 'none',
+  backgroundColor: 'unset',
   cursor: 'pointer',
 });
 

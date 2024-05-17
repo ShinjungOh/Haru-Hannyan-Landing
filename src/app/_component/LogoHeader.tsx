@@ -12,11 +12,11 @@ export default function LogoHeader() {
   };
 
   return (
-    <div className={styles.logoContainer} onClick={onClickLogo}>
+    <button className={styles.logoContainer} onClick={onClickLogo}>
       <img className={styles.LogoImage} src="/feel-cat.svg" alt="하루한냥 로고" />
       <Typography variant="body3" color="black" fontWeight="weightBold">
         하루한냥
       </Typography>
-    </div>
+    </button>
   );
 }

@@ -1,11 +1,11 @@
 'use client';
 
 import { CSSProperties, useEffect, useState } from 'react';
-import { FEATURE_INFO } from '@lib/const/featureInfo';
-import FeatureItem from './FeatureItem';
-import * as styles from './feature.css';
-import { Typography } from '../common/Typography';
 import { useMediaQuery } from 'react-responsive';
+import { FEATURE_INFO } from '@lib/const/featureInfo';
+import { FeatureItem } from '@app/_component/section/feature';
+import * as styles from './feature.css';
+import { Typography } from '../../common/Typography';
 
 type FeatureProps = {
   title: string;

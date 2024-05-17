@@ -1,15 +1,15 @@
 'use client';
 
 import { useMediaQuery } from 'react-responsive';
-import { Typography } from '../common/Typography';
-import * as styles from './section.css';
+import { Typography } from '../../common/Typography';
+import * as styles from '../section.css';
 
 type DescriptionProps = {
   title: string;
   detail: string;
 };
 
-export default function Description({ title, detail }: DescriptionProps) {
+export default function ActualDescription({ title, detail }: DescriptionProps) {
   const isTablet = useMediaQuery({
     query: '(min-width: 768px) and (max-width: 1299px)',
   });
