@@ -14,6 +14,7 @@ const COLOR_PROPERTIES = {
   gray3: '#A1A1A1',
   gray4: '#D3D3D3',
   gray5: '#E9E9E9',
+  whiteGray: '#f1f1f1',
   white: '#ffffff',
 };
 

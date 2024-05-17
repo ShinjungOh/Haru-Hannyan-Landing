@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import styleToken from '../../styles/styleToken.css';
+import styleToken from '@styles/styleToken.css';
 
 export const navigationHeader = style({
   width: '100dvw',
@@ -29,8 +29,9 @@ export const logoContainer = style({
   gap: '10px',
   fontSize: '20px',
   fontWeight: 'bold',
-  fontFamily: 'SUIT-Regular',
   color: `${styleToken.color.gray1}`,
+  border: 'none',
+  backgroundColor: 'unset',
   cursor: 'pointer',
 });
 

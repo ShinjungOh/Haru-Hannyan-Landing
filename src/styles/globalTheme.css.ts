@@ -71,6 +71,10 @@ globalStyle('body', {
   color: global.foreground.color,
 });
 
+globalStyle('h1, h2, h3, h4, h5, h6, p, span', {
+  fontFamily: 'SUIT-Regular',
+});
+
 globalStyle('a', {
   color: 'inherit',
   textDecoration: 'none',

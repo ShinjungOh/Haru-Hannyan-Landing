@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import styleToken from '../../styles/styleToken.css';
+import styleToken from '@styles/styleToken.css';
 
 export const container = style({
   width: '100%',
@@ -8,7 +8,7 @@ export const container = style({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: `${styleToken.color.gray5}90`,
+  backgroundColor: `${styleToken.color.whiteGray}`,
   padding: '0 100px',
   '@media': {
     '(max-width: 767px)': {
@@ -33,13 +33,6 @@ export const titleContainer = style({
   alignItems: 'center',
 });
 
-export const title = style({
-  fontSize: '20px',
-  color: `${styleToken.color.gray1}`,
-  fontFamily: 'SUIT-Regular',
-  marginLeft: '6px',
-});
-
 export const iconContainer = style({
   width: '90%',
   display: 'flex',
@@ -56,6 +49,7 @@ export const iconItem = style({
   justifyContent: 'center',
   alignItems: 'center',
   cursor: 'pointer',
+  border: 'none',
 });
 
 export const iconImage = style({

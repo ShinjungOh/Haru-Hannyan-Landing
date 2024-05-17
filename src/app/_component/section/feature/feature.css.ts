@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import styleToken from '../../styles/styleToken.css';
+import styleToken from '@styles/styleToken.css';
 
 export const container = style({
   display: 'flex',
@@ -24,7 +24,7 @@ export const titleContainer = style({
   alignItems: 'center',
   '@media': {
     '(max-width: 767px)': {
-      width: '90%',
+      width: '80%',
       height: '280px',
     },
   },
@@ -32,19 +32,13 @@ export const titleContainer = style({
 
 export const title = style({
   width: '940px',
-  fontSize: '46px',
-  fontWeight: '600',
-  fontFamily: 'SUIT-Regular',
-  color: `${styleToken.color.gray1}`,
   transition: 'transform 1.0s ease-out',
   transform: 'translateY(100%)',
   '@media': {
     '(min-width: 768px) and (max-width: 1299px)': {
-      fontSize: '40px',
       width: '680px',
     },
     '(max-width: 767px)': {
-      fontSize: '32px',
       width: '440px',
     },
   },
@@ -120,21 +114,6 @@ export const featureTitleContainer = style({
   },
 });
 
-export const featureTitle = style({
-  fontSize: '30px',
-  fontWeight: '700',
-  fontFamily: 'SUIT-Regular',
-  color: `${styleToken.color.alert_success}`,
-  textAlign: 'center',
-  margin: '0 0 0 20px',
-  '@media': {
-    '(max-width: 767px)': {
-      fontSize: '24px',
-      margin: '0 0 0 10px',
-    },
-  },
-});
-
 export const circle = style({
   display: 'flex',
   flexDirection: 'row',
@@ -153,24 +132,6 @@ export const circle = style({
       width: '36px',
       height: '36px',
       fontSize: '16px',
-    },
-  },
-});
-
-export const featureDescription = style({
-  fontSize: '18px',
-  fontWeight: '100',
-  fontFamily: 'SUIT-Regular',
-  color: `${styleToken.color.gray2}`,
-  margin: '30px 0 0 8px',
-  lineHeight: '32px',
-  whiteSpace: 'pre-line',
-  '@media': {
-    '(max-width: 767px)': {
-      textAlign: 'center',
-      fontSize: '14px',
-      lineHeight: '24px',
-      margin: '20px 0 0 0',
     },
   },
 });

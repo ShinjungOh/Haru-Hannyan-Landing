@@ -1,15 +1,22 @@
-import Main from './_component/Main';
-import Feature from './_component/Feature';
-import Footer from './_component/Footer';
-import NavigationHeader from './_component/NavigationHeader';
+import Header from '@app/_component/layout/Header';
+import LogoHeader from '@app/_component/LogoHeader';
+import Main from '@app/_component/layout/Main';
+import HomeMain from '@app/_component/HomeMain';
+import Footer from '@app/_component/layout/Footer';
+import HomeFooter from '@app/_component/HomeFooter';
 
 export default function Home() {
   return (
     <>
-      <NavigationHeader />
-      <Main />
-      <Feature />
-      <Footer />
+      <Header>
+        <LogoHeader />
+      </Header>
+      <Main>
+        <HomeMain />
+      </Main>
+      <Footer>
+        <HomeFooter />
+      </Footer>
     </>
   );
 }
