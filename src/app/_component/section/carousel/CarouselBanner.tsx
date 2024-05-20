@@ -14,8 +14,9 @@ type CarouselBannerProps = {
 
 export default function CarouselBanner({ content }: CarouselBannerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
   const isMounted = useIsMounted();
+  const [width, setWidth] = useState(0);
+  const [isMount, setIsMount] = useState(false);
 
   const isMobile = width < 768;
   const imageWidth = isMobile ? '380px' : '740px';
@@ -36,9 +37,15 @@ export default function CarouselBanner({ content }: CarouselBannerProps) {
     };
   }, [containerRef, handleResize, handleThrottleResize]);
 
+  useEffect(() => {
+    if (isMounted()) {
+      setIsMount(true);
+    }
+  }, [isMounted]);
+
   return (
     <>
-      {isMounted && (
+      {isMount && (
         <div className={styles.container} ref={containerRef}>
           <div className={styles.carouselContainer}>
             <section className={styles.carouselSection}>

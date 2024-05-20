@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useIsMounted } from 'usehooks-ts';
+import { useEffect, useState } from 'react';
 import { PAGE_ADDRESS } from '@lib/const/pageAddress';
 import { useIsMobile, useIsTablet } from '@lib/hooks';
 import * as styles from '../section.css';
@@ -12,14 +13,21 @@ export default function HomeBanner() {
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
   const isMounted = useIsMounted();
+  const [isMount, setIsMount] = useState(false);
 
   const onClickAppLink = () => {
     router.push(PAGE_ADDRESS.app);
   };
 
+  useEffect(() => {
+    if (isMounted()) {
+      setIsMount(true);
+    }
+  }, [isMounted]);
+
   return (
     <>
-      {isMounted && (
+      {isMount && (
         <div className={styles.infoContainer}>
           <section className={styles.infoSection}>
             <Typography variant={isMobile ? 'subtitle3' : isTablet ? 'h3' : 'h2'} fontWeight="weightBold" color="gray1">

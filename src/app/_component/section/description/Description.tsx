@@ -1,6 +1,7 @@
 'use client';
 
 import { useIsMounted } from 'usehooks-ts';
+import { useEffect, useState } from 'react';
 import { useIsMobile, useIsTablet } from '@lib/hooks';
 import { Typography } from '../../common/Typography';
 import * as styles from '../section.css';
@@ -14,10 +15,17 @@ export default function Description({ title, detail }: DescriptionProps) {
   const isMobile = useIsMobile();
   const isTablet = useIsTablet();
   const isMounted = useIsMounted();
+  const [isMount, setIsMount] = useState(false);
+
+  useEffect(() => {
+    if (isMounted()) {
+      setIsMount(true);
+    }
+  }, [isMounted]);
 
   return (
     <>
-      {isMounted && (
+      {isMount && (
         <div className={styles.descriptionContainer}>
           <Typography variant={isMobile ? 'subtitle5' : isTablet ? 'h3' : 'h2'} color="white">
             {title}

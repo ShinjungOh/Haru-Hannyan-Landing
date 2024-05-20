@@ -1,4 +1,5 @@
 import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin';
+import path from 'path';
 
 const withVanillaExtract = createVanillaExtractPlugin();
 
