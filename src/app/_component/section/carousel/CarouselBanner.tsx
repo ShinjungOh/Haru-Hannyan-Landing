@@ -29,6 +29,36 @@ export default function CarouselBanner({ content }: CarouselBannerProps) {
 
   const handleThrottleResize = throttle(handleResize, 100);
 
+  const customIndicator = (onClickHandler, isSelected, index, label) => {
+    if (isSelected) {
+      return (
+        <li
+          className={styles.carouselIndicatorSelected}
+          aria-label={`Selected: ${label} ${index + 1}`}
+          onClick={onClickHandler}
+          onKeyDown={onClickHandler}
+          value={index}
+          key={index}
+          role="button"
+          tabIndex={0}
+        />
+      );
+    }
+
+    return (
+      <li
+        className={styles.carouselIndicator}
+        aria-label={`${label} ${index + 1}`}
+        onClick={onClickHandler}
+        onKeyDown={onClickHandler}
+        value={index}
+        key={index}
+        role="button"
+        tabIndex={0}
+      />
+    );
+  };
+
   useEffect(() => {
     handleResize();
     window.addEventListener(`resize`, handleThrottleResize);
@@ -56,6 +86,7 @@ export default function CarouselBanner({ content }: CarouselBannerProps) {
                 showThumbs={false}
                 showArrows={false}
                 useKeyboardArrows={false}
+                renderIndicator={customIndicator}
               >
                 {content.map((_, index) => {
                   const imageSrc = isMobile ? CAROUSEL[index].mobile : CAROUSEL[index].desktop;

@@ -87,7 +87,7 @@ export const carouselContainer = style({
 
 export const carouselSection = style({
   width: '740px',
-  height: '340px',
+  height: 'auto',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -98,6 +98,26 @@ export const carouselSection = style({
       height: '380px',
     },
   },
+});
+
+export const carouselIndicator = style({
+  backgroundColor: `${styleToken.color.whiteGray}`,
+  width: '10px',
+  height: '10px',
+  borderRadius: '50%',
+  display: 'inline-block',
+  margin: '0 8px 12px',
+  cursor: 'pointer',
+});
+
+export const carouselIndicatorSelected = style({
+  backgroundColor: `${styleToken.color.primary}`,
+  width: '10px',
+  height: '10px',
+  borderRadius: '50%',
+  display: 'inline-block',
+  margin: '0 8px 12px',
+  cursor: 'pointer',
 });
 
 export const descriptionContainer = style({
