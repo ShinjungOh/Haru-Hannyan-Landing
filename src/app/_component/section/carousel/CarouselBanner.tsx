@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
+import { useIsMounted } from 'usehooks-ts';
 import throttle from '@lib/utils/throttle';
 import { CAROUSEL } from '@lib/const/carousel';
 import * as styles from '../section.css';
@@ -11,9 +12,10 @@ type CarouselBannerProps = {
   content: Array<{ mobile: string; desktop: string }>;
 };
 
-export default function ActualCarouselBanner({ content }: CarouselBannerProps) {
+export default function CarouselBanner({ content }: CarouselBannerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
+  const isMounted = useIsMounted();
 
   const isMobile = width < 768;
   const imageWidth = isMobile ? '380px' : '740px';
@@ -35,28 +37,32 @@ export default function ActualCarouselBanner({ content }: CarouselBannerProps) {
   }, [containerRef, handleResize, handleThrottleResize]);
 
   return (
-    <div className={styles.container} ref={containerRef}>
-      <div className={styles.carouselContainer}>
-        <section className={styles.carouselSection}>
-          <Carousel
-            autoPlay
-            infiniteLoop
-            showStatus={false}
-            showThumbs={false}
-            showArrows={false}
-            useKeyboardArrows={false}
-          >
-            {content.map((_, index) => {
-              const imageSrc = isMobile ? CAROUSEL[index].mobile : CAROUSEL[index].desktop;
-              return (
-                <div key={index}>
-                  <img src={imageSrc} alt="feature_image" width={imageWidth} />
-                </div>
-              );
-            })}
-          </Carousel>
-        </section>
-      </div>
-    </div>
+    <>
+      {isMounted && (
+        <div className={styles.container} ref={containerRef}>
+          <div className={styles.carouselContainer}>
+            <section className={styles.carouselSection}>
+              <Carousel
+                autoPlay
+                infiniteLoop
+                showStatus={false}
+                showThumbs={false}
+                showArrows={false}
+                useKeyboardArrows={false}
+              >
+                {content.map((_, index) => {
+                  const imageSrc = isMobile ? CAROUSEL[index].mobile : CAROUSEL[index].desktop;
+                  return (
+                    <div key={index}>
+                      <img src={imageSrc} alt="feature_image" width={imageWidth} />
+                    </div>
+                  );
+                })}
+              </Carousel>
+            </section>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

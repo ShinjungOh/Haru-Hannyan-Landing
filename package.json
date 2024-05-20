@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint src --dir src",
+    "lint": "next lint ./src",
     "prepare": "husky install",
     "prettier:check": "prettier --check \"src/**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"src/**/*.{ts,tsx}\"",
@@ -23,7 +23,8 @@
     "react-dom": "^18",
     "react-loading-skeleton": "^3.4.0",
     "react-responsive": "^10.0.0",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
