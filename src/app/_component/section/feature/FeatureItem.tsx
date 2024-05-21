@@ -1,9 +1,8 @@
 'use client';
 
-import { CSSProperties, useEffect, useRef, useState } from 'react';
+import { CSSProperties, useRef } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
-import { useIsMounted } from 'usehooks-ts';
-import { useIsMobile } from '@lib/hooks';
+import { useIsMobile, useIsMounted } from '@lib/hooks';
 import * as styles from './feature.css';
 import { Typography } from '../../common/Typography';
 
@@ -26,61 +25,48 @@ export default function FeatureItem({ number, title, description, imageSrc, imag
   const y = useParallax(scrollYProgress, 200);
   const isMobile = useIsMobile();
   const isMounted = useIsMounted();
-  const [isMount, setIsMount] = useState(false);
 
-  useEffect(() => {
-    if (isMounted()) {
-      setIsMount(true);
-    }
-  }, [isMounted]);
+  const titleSize = isMobile ? 'body1' : 'subtitle4';
+  const titleStyle = isMobile
+    ? { marginLeft: '10px', textAlign: 'center' as 'center' }
+    : { marginLeft: '20px', textAlign: 'center' as 'center' };
 
   return (
-    <>
-      <motion.div style={{ y }}>
-        <section className={styles.featureContainer} style={style}>
-          <img className={imageClassName} src={imageSrc} alt={title} ref={featureRef} />
-          <div className={styles.infoContainer}>
-            {isMount && (
-              <>
-                <div className={styles.featureTitleContainer}>
-                  <div className={styles.circle}>{number}</div>
-                  <Typography
-                    variant={isMobile ? 'body1' : 'subtitle4'}
-                    color="alert_success"
-                    fontWeight="weightBold"
-                    style={
-                      isMobile
-                        ? { marginLeft: '10px', textAlign: 'center' }
-                        : { marginLeft: '20px', textAlign: 'center' }
-                    }
-                  >
-                    {title}
-                  </Typography>
-                </div>
-                {isMobile ? (
-                  <Typography
-                    variant="body6"
-                    style={{
-                      textAlign: 'center',
-                      marginTop: '20px',
-                      lineHeight: '24px',
-                    }}
-                  >
-                    {description}
-                  </Typography>
-                ) : (
-                  <Typography
-                    variant="body4"
-                    style={{ margin: '30px 0 0 8px', lineHeight: '32px', whiteSpace: 'pre-line' }}
-                  >
-                    {description}
-                  </Typography>
-                )}
-              </>
-            )}
-          </div>
-        </section>
-      </motion.div>
-    </>
+    <motion.div style={{ y }}>
+      <section className={styles.featureContainer} style={style}>
+        <img className={imageClassName} src={imageSrc} alt={title} ref={featureRef} />
+        <div className={styles.infoContainer}>
+          {isMounted && (
+            <>
+              <div className={styles.featureTitleContainer}>
+                <div className={styles.circle}>{number}</div>
+                <Typography variant={titleSize} color="alert_success" fontWeight="weightBold" style={titleStyle}>
+                  {title}
+                </Typography>
+              </div>
+              {isMobile ? (
+                <Typography
+                  variant="body6"
+                  style={{
+                    textAlign: 'center',
+                    marginTop: '20px',
+                    lineHeight: '24px',
+                  }}
+                >
+                  {description}
+                </Typography>
+              ) : (
+                <Typography
+                  variant="body4"
+                  style={{ margin: '30px 0 0 8px', lineHeight: '32px', whiteSpace: 'pre-line' }}
+                >
+                  {description}
+                </Typography>
+              )}
+            </>
+          )}
+        </div>
+      </section>
+    </motion.div>
   );
 }
