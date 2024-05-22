@@ -16,6 +16,9 @@ export default function Feature({ title }: FeatureProps) {
   const isMounted = useIsMounted();
   const [isVisible, setIsVisible] = useState(false);
 
+  const titleClassName = `${styles.title} ${isVisible ? styles.titleVisible : ''}`;
+  const titleSize = isMobile ? 'subtitle3' : 'h3';
+
   useEffect(() => {
     const handleScroll = () => {
       const shouldShow = window.scrollY > window.innerHeight / 2;
@@ -31,8 +34,8 @@ export default function Feature({ title }: FeatureProps) {
       {isMounted && (
         <>
           <div className={styles.titleContainer}>
-            <h1 className={`${styles.title} ${isVisible ? styles.titleVisible : ''}`}>
-              <Typography variant={isMobile ? 'subtitle3' : 'h3'} fontWeight="weightBold" color="gray1">
+            <h1 className={titleClassName}>
+              <Typography variant={titleSize} fontWeight="weightBold" color="gray1">
                 {title}
               </Typography>
             </h1>

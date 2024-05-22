@@ -20,7 +20,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
 }
 
 export default function FeatureItem({ number, title, description, imageSrc, imageClassName, style }: FeatureItemProps) {
-  const featureRef = useRef(null);
+  const featureRef = useRef<HTMLImageElement>(null);
   const { scrollYProgress } = useScroll({ target: featureRef });
   const y = useParallax(scrollYProgress, 200);
   const isMobile = useIsMobile();

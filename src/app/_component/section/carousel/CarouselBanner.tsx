@@ -1,9 +1,8 @@
 'use client';
 
-import { useCallback, useEffect, useRef, useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import throttle from '@lib/utils/throttle';
 import { CAROUSEL } from '@lib/const/carousel';
+import { useCalcWidthRef } from '@lib/hooks/useCalcWidthRef.ts';
 import * as styles from '../section.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -30,27 +29,10 @@ const CustomIndicator = (onClick, isSelected, index, label) => {
 };
 
 export default function CarouselBanner({ content }: CarouselBannerProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
+  const { width, ref: containerRef } = useCalcWidthRef<HTMLDivElement>();
 
   const isMobile = width < 768;
   const imageWidth = isMobile ? '380px' : '740px';
-
-  const handleResize = useCallback(() => {
-    if (containerRef.current && containerRef.current.clientWidth) {
-      setWidth(containerRef.current.offsetWidth || 0);
-    }
-  }, []);
-
-  const handleThrottleResize = throttle(handleResize, 100);
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener(`resize`, handleThrottleResize);
-    return () => {
-      window.removeEventListener(`resize`, handleThrottleResize);
-    };
-  }, [containerRef, handleResize, handleThrottleResize]);
 
   return (
     <div className={styles.container} ref={containerRef}>
