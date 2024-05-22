@@ -1,9 +1,11 @@
 'use client';
 
 import { CSSProperties, useEffect, useState } from 'react';
+import { PulseLoader } from 'react-spinners';
 import { FEATURE_INFO } from '@lib/const/featureInfo';
 import FeatureItem from '@app/_component/section/feature/FeatureItem';
 import { useIsMobile, useIsMounted } from '@lib/hooks';
+import styleToken from '@styles/styleToken.css';
 import * as styles from './feature.css';
 import { Typography } from '../../common/Typography';
 
@@ -29,8 +31,11 @@ export default function Feature({ title }: FeatureProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const unMountStyle = !isMounted ? { height: '600px', backgroundColor: styleToken.color.white } : undefined;
+
   return (
-    <section className={styles.container}>
+    <section className={styles.container} style={unMountStyle}>
+      {!isMounted ? <PulseLoader color={styleToken.color.primary} speedMultiplier={1.5} size={12} /> : null}
       {isMounted ? (
         <>
           <div className={styles.titleContainer}>

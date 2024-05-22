@@ -1,10 +1,12 @@
 'use client';
 
 import { Carousel } from 'react-responsive-carousel';
+import { PulseLoader } from 'react-spinners';
 import { CAROUSEL } from '@lib/const/carousel';
-import { useCalcWidthRef } from '@lib/hooks/useCalcWidthRef.ts';
-import * as styles from '../section.css';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import styleToken from '@styles/styleToken.css';
+import { useCalcWidthRef } from '@lib/hooks';
+import * as styles from '../section.css';
 
 type CarouselBannerProps = {
   content: Array<{ mobile: string; desktop: string }>;
@@ -37,8 +39,9 @@ export default function CarouselBanner({ content }: CarouselBannerProps) {
 
   return (
     <div className={styles.container} ref={containerRef}>
-      {isMounted ? (
-        <div className={styles.carouselContainer}>
+      <div className={styles.carouselContainer}>
+        {!isMounted ? <PulseLoader color={styleToken.color.primary} speedMultiplier={1.5} size={12} /> : null}
+        {isMounted ? (
           <section className={styles.carouselSection}>
             <Carousel
               autoPlay
@@ -59,8 +62,8 @@ export default function CarouselBanner({ content }: CarouselBannerProps) {
               })}
             </Carousel>
           </section>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
     </div>
   );
 }

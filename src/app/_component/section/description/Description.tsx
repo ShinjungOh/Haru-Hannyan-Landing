@@ -1,6 +1,8 @@
 'use client';
 
+import { PulseLoader } from 'react-spinners';
 import { useIsMobile, useIsMounted, useIsTablet } from '@lib/hooks';
+import styleToken from '@styles/styleToken.css.ts';
 import { Typography } from '../../common/Typography';
 import * as styles from '../section.css';
 
@@ -18,14 +20,19 @@ export default function Description({ title, detail }: DescriptionProps) {
   const descriptionSize = isMobile ? 'body4' : 'body3';
   const descriptionMargin = isMobile ? { marginTop: '8px' } : { marginTop: '16px' };
 
-  return isMounted ? (
+  return (
     <div className={styles.descriptionContainer}>
-      <Typography variant={titleSize} color="white">
-        {title}
-      </Typography>
-      <Typography variant={descriptionSize} color="white" style={descriptionMargin}>
-        {detail}
-      </Typography>
+      {!isMounted ? <PulseLoader color={styleToken.color.background} speedMultiplier={1.5} size={12} /> : null}
+      {isMounted ? (
+        <>
+          <Typography variant={titleSize} color="white">
+            {title}
+          </Typography>
+          <Typography variant={descriptionSize} color="white" style={descriptionMargin}>
+            {detail}
+          </Typography>
+        </>
+      ) : null}
     </div>
-  ) : null;
+  );
 }

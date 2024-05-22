@@ -24,6 +24,7 @@
     "react-loading-skeleton": "^3.4.0",
     "react-responsive": "^10.0.0",
     "react-responsive-carousel": "^3.2.23",
+    "react-spinners": "^0.13.8",
     "usehooks-ts": "^3.1.0"
   },
   "devDependencies": {
