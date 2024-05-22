@@ -33,31 +33,34 @@ export default function CarouselBanner({ content }: CarouselBannerProps) {
 
   const isMobile = width < 768;
   const imageWidth = isMobile ? '380px' : '740px';
+  const isMounted = width > 0;
 
   return (
     <div className={styles.container} ref={containerRef}>
-      <div className={styles.carouselContainer}>
-        <section className={styles.carouselSection}>
-          <Carousel
-            autoPlay
-            infiniteLoop
-            showStatus={false}
-            showThumbs={false}
-            showArrows={false}
-            useKeyboardArrows={false}
-            renderIndicator={CustomIndicator}
-          >
-            {content.map((_, index) => {
-              const imageSrc = isMobile ? CAROUSEL[index].mobile : CAROUSEL[index].desktop;
-              return (
-                <div key={index}>
-                  <img src={imageSrc} alt="feature_image" width={imageWidth} />
-                </div>
-              );
-            })}
-          </Carousel>
-        </section>
-      </div>
+      {isMounted ? (
+        <div className={styles.carouselContainer}>
+          <section className={styles.carouselSection}>
+            <Carousel
+              autoPlay
+              infiniteLoop
+              showStatus={false}
+              showThumbs={false}
+              showArrows={false}
+              useKeyboardArrows={false}
+              renderIndicator={CustomIndicator}
+            >
+              {content.map((_, index) => {
+                const imageSrc = isMobile ? CAROUSEL[index].mobile : CAROUSEL[index].desktop;
+                return (
+                  <div key={index}>
+                    <img src={imageSrc} alt="feature_image" width={imageWidth} />
+                  </div>
+                );
+              })}
+            </Carousel>
+          </section>
+        </div>
+      ) : null}
     </div>
   );
 }

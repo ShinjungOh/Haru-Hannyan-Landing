@@ -36,7 +36,7 @@ export default function FeatureItem({ number, title, description, imageSrc, imag
       <section className={styles.featureContainer} style={style}>
         <img className={imageClassName} src={imageSrc} alt={title} ref={featureRef} />
         <div className={styles.infoContainer}>
-          {isMounted && (
+          {isMounted ? (
             <>
               <div className={styles.featureTitleContainer}>
                 <div className={styles.circle}>{number}</div>
@@ -64,7 +64,7 @@ export default function FeatureItem({ number, title, description, imageSrc, imag
                 </Typography>
               )}
             </>
-          )}
+          ) : null}
         </div>
       </section>
     </motion.div>

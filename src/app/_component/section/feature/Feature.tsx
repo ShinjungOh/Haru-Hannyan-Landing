@@ -31,7 +31,7 @@ export default function Feature({ title }: FeatureProps) {
 
   return (
     <section className={styles.container}>
-      {isMounted && (
+      {isMounted ? (
         <>
           <div className={styles.titleContainer}>
             <h1 className={titleClassName}>
@@ -61,7 +61,7 @@ export default function Feature({ title }: FeatureProps) {
             })}
           </section>
         </>
-      )}
+      ) : null}
       <div />
     </section>
   );
