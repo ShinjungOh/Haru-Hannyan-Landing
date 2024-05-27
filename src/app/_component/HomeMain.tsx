@@ -1,16 +1,16 @@
-import { CAROUSEL } from '@lib/const/carousel';
 import styleToken from '@styles/styleToken.css';
 import Section from '@app/_component/section/Section';
-import { Banner } from '@app/_component/section/banner';
-import { CarouselBanner } from '@app/_component/section/carousel';
-import { Description } from '@app/_component/section/description';
-import { Feature } from '@app/_component/section/feature';
+import HomeBanner from '@app/_component/section/banner/HomeBanner';
+import CarouselBanner from '@app/_component/section/carousel/CarouselBanner';
+import Description from '@app/_component/section/description/Description';
+import Feature from '@app/_component/section/feature/Feature';
+import { CAROUSEL } from '@lib/const/carousel';
 
 export default function HomeMain() {
   return (
     <>
       <Section backgroundColor={`${styleToken.color.primaryLight}`}>
-        <Banner />
+        <HomeBanner />
       </Section>
       <Section backgroundColor={`${styleToken.color.background}`}>
         <CarouselBanner content={CAROUSEL} />

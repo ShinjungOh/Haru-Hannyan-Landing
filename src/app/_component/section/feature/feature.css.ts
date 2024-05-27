@@ -2,6 +2,7 @@ import { style } from '@vanilla-extract/css';
 import styleToken from '@styles/styleToken.css';
 
 export const container = style({
+  width: '100%',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
