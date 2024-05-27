@@ -16,7 +16,7 @@
     "incremental": true, // 컴파일 결과물과 동일한 폴더에 .tsbuildinfo 파일이 생성
     "newLine": "lf", // 파일을 내보낼 때 줄바꿈의 끝을 unix로 지정
     /* Bundler mode */
-    "moduleResolution": "bundler", // import가 무엇을 참조하는지 알아내기 위해 사용하는 프로세스
+    "moduleResolution": "node", // import가 무엇을 참조하는지 알아내기 위해 사용하는 프로세스
     "allowImportingTsExtensions": true, // .ts, .mts, .tsx 등 확장자로 서로를 가져올 수 있음
     "resolveJsonModule": true, // JSON을 import 할 수 있음
     "isolatedModules": true, // 모든 파일을 모듈로 만들어야 함 (import, export 하지 않으면 에러)
@@ -55,7 +55,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src",
+    "src"
   ],
   "exclude": [
     "node_modules"
