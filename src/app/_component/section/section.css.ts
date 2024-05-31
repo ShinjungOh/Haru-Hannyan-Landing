@@ -16,7 +16,7 @@ export const container = style({
 });
 
 export const infoContainer = style({
-  width: '100dvw',
+  width: '100%',
   height: '100%',
   display: 'flex',
   flexDirection: 'row',
