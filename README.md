@@ -71,7 +71,7 @@ npm run dev
       <td align="center" valign="middle">
         <div>
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" width="500" height="1" />
-          <img width="50" src="https://camo.githubusercontent.com/39791c3e4c4387b8b913628a8f258768ea3a4a71fc815ced2219f81c22c71f6a/68747470733a2f2f6173736574732e76657263656c2e636f6d2f696d6167652f75706c6f61642f76313636323133303535392f6e6578746a732f49636f6e5f6c696768745f6261636b67726f756e642e706e67" />
+          <img width="50" src="https://github.com/user-attachments/assets/6774b399-ac00-484d-b3af-971e89dc1115" />
           <p align="center">
             Next.js
           </P>
@@ -89,7 +89,7 @@ npm run dev
       <td align="center" valign="middle">
         <div>
           <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png" width="500" height="1" />
-          <img src="https://camo.githubusercontent.com/3bcd317876dc122d3055613c7f5450134050d0c5a8683807c6f2e8e2178737b0/68747470733a2f2f6672616d657275736572636f6e74656e742e636f6d2f696d616765732f34386861395a52396f5a51475136675a38595566456c50335430412e706e67" width="50" height="50" alt="Framer Motion Icon" data-canonical-src="https://framerusercontent.com/images/48ha9ZR9oZQGQ6gZ8YUfElP3T0A.png" style="max-width: 100%;">
+          <img src="https://framerusercontent.com/images/48ha9ZR9oZQGQ6gZ8YUfElP3T0A.png" width="50" height="50" alt="Framer Motion Icon"> 
           <p align="center">
             Framer Motion
           </p>
@@ -148,7 +148,7 @@ npm run dev
 ### 1. 프로젝트를 진행하며 깨달은 점
 
 랜딩 페이지는 사용자에게 한 눈에 어필해야하는 광고판으로 접근해야 한다.
-많은 정보를 제공하면서도 지루하지 않도록 사용자 이펙트가 있어야 한다. 
+많은 정보를 제공하면서도 지루하지 않도록 사용자 이펙트가 있어야 한다.
 그렇기에 서버 사이드 렌더링으로 접근할 경우 많은 고려가 필요했다.  
 사용자 기기의 크기를 측정해서 화면을 조정하는 반응형, 스크롤 이펙트 등을 SSR로 다루려면 미리 서버에서 만들어진 HTML을 내려주는 **SSR 방식을 능숙하게 사용할 줄 알아야 했다.**
 
@@ -156,22 +156,22 @@ npm run dev
 
 기획 단계에서, 기술 스택을 정하는 개념 증명 단계에서 더 깊게 생각하고 결정해야 했다.
 사실은 쓰고 싶은 기술이 정해져 있고 이유는 가져다 붙인게 아니었는지 돌아보았다.
-욕심내서 어려운 기술을 시도했다가 트러블 슈팅만 잔뜩 했고 프로젝트를 만들어나가는 재미는 줄어들었다. 
+욕심내서 어려운 기술을 시도했다가 트러블 슈팅만 잔뜩 했고 프로젝트를 만들어나가는 재미는 줄어들었다.
 결국 **동기부여 저하**로 이어졌다.
 
 ### 3. 렌더링 패턴에 따른 라이브러리 사용의 어려움
 
-렌더링 패턴으로 인한 이슈를 겪고 나니 특히나 프로젝트에 SSR을 도입하려면 심사숙고해야겠다고 느꼈다. 
+렌더링 패턴으로 인한 이슈를 겪고 나니 특히나 프로젝트에 SSR을 도입하려면 심사숙고해야겠다고 느꼈다.
 클라이언트 컴포넌트에서만 사용할 수 있는 라이브러리가 따로 있었고, **클라이언트 컴포넌트와 서버 컴포넌트의 차이점을 계속 구분하면서 개발하는 것이 복잡**했다.
 Next.js 환경 설정이 추가로 필요한 라이브러리도 있고(Vanilla-extract 등) 환경 세팅이 어려웠다.
 
-대부분의 컴포넌트에 "use client"를 붙여 작업했기 때문에 CSR과 비교해 SSR의 장점을 가져가지 못했다. 
+대부분의 컴포넌트에 "use client"를 붙여 작업했기 때문에 CSR과 비교해 SSR의 장점을 가져가지 못했다.
 서버 컴포넌트란 서버 사이드 렌더링과 무슨 관련이 있는지도 학습이 필요했다.
-Vanilla-extract라는 새로운 스타일 라이브러리를 사용한 것도 문제가 됐다. 
+Vanilla-extract라는 새로운 스타일 라이브러리를 사용한 것도 문제가 됐다.
 공통 컴포넌트를 사용해 동적 스타일링이 원활하게 적용되도록 recipes와 dynamic 등의 패키지도 사용해봤지만 오류가 계속되거나, 학습 곡선만 높아졌다.
 
-### 4. 회고  
+### 4. 회고
 
-SSR 렌더링 패턴에 대해 많이 깨져보고 얻는 것이 많았다. 
+SSR 렌더링 패턴에 대해 많이 깨져보고 얻는 것이 많았다.
 다음에 프로젝트를 진행하게 되면 기술 스택부터 신중할 것이다.
 **개념 증명은 남을 설득할 수 있을 만큼 자신에게 확신이 있어야겠다는 깨달음**을 얻었다.  
